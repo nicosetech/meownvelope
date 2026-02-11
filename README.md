@@ -1,29 +1,32 @@
-# README #
+# Meownvelope #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+# Who you're working with #
 
-### What is this repository for? ###
+* Emma Taylor
+* Jake Olsen
+* Nico San Esteban
+* Steven Kertes Jr
+* Treston Fallavollita
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+# What you're creating #
 
-### How do I get set up? ###
+Meownvelope is a savings application that tracks and helps decide what your savings split should be, all while maintaining it for you.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### What is the goal? ###
 
-### Contribution guidelines ###
+The Goal of our application is to help younger adults branch into starting their personal savings making it easy and seamless, all while adding some fun and creativity into it.
 
-* Writing tests
-* Code review
-* Other guidelines
+### Who you're doing it for, your audience? ###
 
-### Who do I talk to? ###
+Our Target Audience / Demographic consists of:
 
-* Repo owner or admin
-* Other community or team contact
+* Young adults  (18-30)
+* College Students
+* Persons interested in financial growth
+* Cat Lovers
+* Anyone interested in low maintenance savings
+
+### why you're doing this, the impact or change you hope to make? ###
+
+Starting to save as a young adult can seem daunting to many. With so many complicated apps that expect you to have a certain level of knowledge about starting savings, it can be stressful to start building your future.With Meowvenlope, our main principle is to make starting savings as easy as possible by dumbing down definitions and tasks to an easycomprehension so that anyone can start building their future.
+
