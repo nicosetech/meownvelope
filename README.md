@@ -34,6 +34,7 @@ Starting to save as a young adult can seem daunting to many. With so many compli
 # Main Logo #
 
 ![Alt text](./images/Cat_Cash_Logo.png)
+
 Designed by Nico San Esteban
 
 # Technology #
