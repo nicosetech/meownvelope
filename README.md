@@ -35,3 +35,35 @@ Starting to save as a young adult can seem daunting to many. With so many compli
 
 ![Alt text](https://i.imgur.com/77Gx4D9.png)
 Designed by Nico San Esteban
+
+# Technology #
+
+* Jira
+* BitBucket
+* Flask (Base and Backend)
+* Flutter (Future use)
+* OpenAI
+
+# Features #
+
+Picking envelope categories
+
+* Creating an initial envolope that represents spending categories.
+
+Track money
+
+* Peering into your investment amount and showing money breakdown.
+
+Moving/Spending
+
+* Having the ability to move and spend the saved up amount.
+
+Monthly summary
+
+* Summary of each month displaying a graph of monthly spending.
+
+AI Assistant
+
+* Having a personal AI assistent to help establish goals, answer questions, and make the application easy to navigate.
+
+
