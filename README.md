@@ -11,6 +11,7 @@
 # What you're creating #
 
 Meownvelope is a savings application that tracks and helps decide what your savings split should be, all while maintaining it for you.
+We plan to incorpurate an intuitive savings technique of using envelopes to organize paper money by creating digital cateogories that users can place currency into.
 
 # What is the goal? #
 
