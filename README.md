@@ -34,6 +34,3 @@ Starting to save as a young adult can seem daunting to many. With so many compli
 
 ![Alt text](https://i.imgur.com/77Gx4D9.png)
 Designed by Nico San Esteban
-
-
-
