@@ -39,11 +39,23 @@ Designed by Nico San Esteban
 
 # Technology #
 
-* Jira
+Tools: 
+
 * BitBucket
-* Flask (Base and Backend)
-* Flutter (Future use)
+* Jira
+* VS Code
+* Slack
 * OpenAI
+
+Languages: 
+
+* Python
+* Flutter
+
+Frameworks:
+
+* Flask (Base and Backend)
+* React?
 
 # Features #
 
