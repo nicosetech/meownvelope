@@ -59,24 +59,38 @@ Frameworks:
 
 # Features #
 
-Picking envelope categories
+### Picking envelope categories ###
 
-* Creating an initial envolope that represents spending categories.
+Creating an initial envolope that represents spending categories.
 
-Track money
+* As a user I want to create envelopes that represent my different spending categories to visualize where my money will go during the month.
+* As a user with a significant partner, I would like to be able to have collaborative envelopes so my partner and I can budget together.
 
-* Peering into your investment amount and showing money breakdown.
+### Track money ###
 
-Moving/Spending
+Peering into your investment amount and showing money breakdown.
 
-* Having the ability to move and spend the saved up amount.
+* As a user who prefers visual representations, I would like visual elements like pie charts so that I can better understand the distribution of my savings.
+* As a user I want to link my bank account to the app so that I can streamline my budgeting and keep it up to date with my income and expenses.
 
-Monthly summary
+## Moving/Spending ##
 
-* Summary of each month displaying a graph of monthly spending.
+Having the ability to move and spend the saved up amount.
 
-AI Assistant
+* As a user I want to move money between my envelopes for flexible budgeting that takes into account unexpected expenses.
+* As a user I want to add recurring payments to account for subscription services and repeat purchases.
 
-* Having a personal AI assistent to help establish goals, answer questions, and make the application easy to navigate.
+### Monthly summary ###
 
+Summary of each month displaying a graph of monthly spending.
+
+* As a user who get's overwhelmed by too many statistics, I want a friendly monthly overview so I can get a brief summary of my spending habits.
+* As a user who lacks the motivation to save money, I would like cat themed encouragement in the form of daily saving streaks and badges, so that I can feel more inspired to save.
+
+### AI Assistant ###
+
+Having a personal AI assistent to help establish goals, answer questions, and make the application easy to navigate.
+
+* As a user that struggles to navigate finance, I want a chat bot AI Assistant so I can receive guidance navigating the Meownvelope application and have my basic financial questions answered.
+* As a user that has difficulty making financial plans, I want a built in AI Assistant that can analyze my past user data so that I can receive personalized recommendations to help plan for the future.
 
