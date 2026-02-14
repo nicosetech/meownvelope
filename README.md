@@ -50,12 +50,14 @@ Tools:
 Languages: 
 
 * Python
-* Flutter
+* Flutter/Dart
 
-Frameworks:
+Backend tools:
 
-* Flask (Base and Backend)
-* React?
+* Flask
+* MySQL
+* Docker
+* Portainer
 
 # Features #
 
