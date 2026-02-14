@@ -59,11 +59,17 @@ Frameworks:
 
 # Features #
 
+### Website Development ###
+
+Creating an initial website with basic information.
+
+* As a user I want a website so I can have a interactive page to contact support and see information
+
 ### Picking envelope categories ###
 
 Creating an initial envolope that represents spending categories.
 
-* As a user I want to create envelopes that represent my different spending categories to visualize where my money will go during the month.
+* As a user who has a hard time limiting digital spending, I want to create envelopes that will store digital bills and represent my different spending categories to visualize where my money will go each month.
 * As a user with a significant partner, I would like to be able to have collaborative envelopes so my partner and I can budget together.
 
 ### Track money ###
@@ -71,14 +77,14 @@ Creating an initial envolope that represents spending categories.
 Peering into your investment amount and showing money breakdown.
 
 * As a user who prefers visual representations, I would like visual elements like pie charts so that I can better understand the distribution of my savings.
-* As a user I want to link my bank account to the app so that I can streamline my budgeting and keep it up to date with my income and expenses.
+* As a user who needs budgeting to be approachable, I want to link my bank account to the app so that I can streamline my planning and keep it up to date with my income and expenses.
 
 ## Moving/Spending ##
 
 Having the ability to move and spend the saved up amount.
 
-* As a user I want to move money between my envelopes for flexible budgeting that takes into account unexpected expenses.
-* As a user I want to add recurring payments to account for subscription services and repeat purchases.
+* As a user who deals with inconsistent expenses each month I want to be able to move money between envelopes to take into account for unexpected expenses.
+* As a user who struggles to keep up with repeated payments, I want the ability to add recurring payments for subscriptions and repeat purchases.
 
 ### Monthly summary ###
 
