@@ -1,4 +1,4 @@
-# Meownvelope #
+ # Meownvelope #
 
 # Who you're working with #
 
@@ -65,7 +65,7 @@ Backend tools:
 
 Creating an initial website with basic information.
 
-* As a user I want a website so I can have a interactive page to contact support and see information
+* As a user that enjoys more additional information,  I want a website so I can have an interactive page to contact support and see information about Meownvelope.
 
 ### Picking envelope categories ###
 
