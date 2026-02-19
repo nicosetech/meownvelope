@@ -1,8 +1,12 @@
+/* Whole webpage */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Navbar */
 
 .navbar {
     display: flex;
@@ -31,4 +35,32 @@
     color: black;
     font-size: 1rem;
 }
+
+/* Home Page */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #d8aaee, #f5c0d0);
+}
+
+.hero-img {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #333;
+}
+
 
