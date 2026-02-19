@@ -63,4 +63,48 @@
     color: #333;
 }
 
+/* Features */
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 60px 60px 60px;
+    background: linear-gradient(135deg, #d8aaee, #f5c0d0);
+}
+
+.card {
+    border-radius: 20px;
+    padding: 30px;
+    width: 350px;
+}
+
+.card-purple {
+    background-color: #d9b8f5;
+}
+
+.card-orange {
+    background-color: #f5c87a;
+}
+
+.card-green {
+    background-color: #a8e6c1;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color:#333;
+}
+
+
 
