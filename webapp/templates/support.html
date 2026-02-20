@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meownvelope - Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation (same as homepage) -->
-    <header>
-        <img src="/static/images/Cat_Cash_Logo.png" alt="Logo" width="50">
-        <span>Meownvelope</span>
-        <nav>
+    <header class="navbar">
+        <div class="nav-logo">
+            <img src="/static/images/Cat_Cash_Logo.png" alt="Logo" width="50">
+            <span>Meownvelope</span>
+        </div>
+        <nav class="nav-links">
             <a href="/">Home</a>
             <a href="/info">Info</a>
             <a href="/about">About Us</a>
@@ -19,32 +23,29 @@
     </header>
 
     <!-- Page Title -->
-    <h1>Contact Us 📮</h1>
-    <p>Have questions about saving with Meownvelope? Our team is here to help you succeed!</p>
-
+    <secction class="support-hero">
+        <h1 class="support-title">Contact Us 📮</h1>
+        <p class="support-subtitle">Have questions about saving with Meownvelope? Our team is here to help you succeed!</p>
+    </secction>
     <!-- Contact Form -->
-    <h2>Send Us a Message 💌</h2>
-    
-    <form>
-        <!-- Name Field -->
-        <label>Your Name</label><br>
-        <input type="text" placeholder="Enter your name" required><br><br>
+    <section class="form-wrapper">
+        <h2 class="form-heading">Send Us a Message 💌</h2>
+        <form class="contact-form" action="/support" method="POST">
+            <label class="form-label">Your Name</label>
+            <input class="form-input" type="text" name="name" placeholder="Enter your name" required>
 
-        <!-- Email Field -->
-        <label>Email Address</label><br>
-        <input type="email" placeholder="your.email@example.com" required><br><br>
+            <label class="form-label">Email Address</label>
+            <input class="form-input" type="email" name="email" placeholder="your.email@example.com" required>
 
-        <!-- Subject Field -->
-        <label>Subject</label><br>
-        <input type="text" placeholder="What's this about?" required><br><br>
+            <label class="form-label">Subject</label>
+            <input class="form-input" type="text" name="text" placeholder="What's this about?" required>
 
-        <!-- Message Field -->
-        <label>Message</label><br>
-        <textarea placeholder="Tell us what's on your mind..." required></textarea><br><br>
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" name="message" placeholder="Tell us what's on your mind..." required></textarea>
 
-        <!-- Submit Button -->
-        <button type="submit">Send Message 💌</button>
-    </form>
+            <button class="form-button" type="submit">Send Message 🚀</button>
+        </form>
+    </section>
 
 </body>
 </html>

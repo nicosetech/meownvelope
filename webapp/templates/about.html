@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meownvelope - About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation (same as other pages) -->
-    <header>
-        <img src="/static/images/Cat_Cash_Logo.png" alt="Logo" width="50">
-        <span>Meownvelope</span>
-        <nav>
+    <header class="navbar">
+        <div class="nav-logo">
+            <img src="/static/images/Cat_Cash_Logo.png" alt="Logo" width="50">
+            <span>Meownvelope</span>
+        </div>
+        <nav class="nav-links">
             <a href="/">Home</a>
             <a href="/info">Info</a>
             <a href="/about">About Us</a>
@@ -19,59 +23,61 @@
     </header>
 
     <!-- Page Title -->
-    <h1>About 🐾</h1>
-    <p>We're on a mission to help young adults build their financial future—one digital envelope at a time!</p>
-
+    <section class="about-hero">
+        <h1 class="about-title">About 🐾</h1>
+        <p class="about-subtitle">We're on a mission to help young adults build their financial future—one digital envelope at a time!</p>
+    </seciton>
     <!-- Team Section -->
-    <h2>Meet Our Team 🌟</h2>
     
-    <section>
-        <div>
-            <p>😺</p>
-            <h3>Emma Taylor</h3>
-        </div>
-
-        <div>
-            <p>😸</p>
-            <h3>Jake Olson</h3>
-        </div>
-
-        <div>
-            <p>😻</p>
-            <h3>Nico San Esteban</h3>
-        </div>
-        <div>
-            <p>😺</p>
-            <h3>Trenton Failavollita</h3>
-        </div>
-        <div>
-            <p>😾</p>
-            <h3>Steven Kertes</h3>
+    <section class="team-section">
+        <h2 class="section-heading">Meet Our Team 🌟</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <p class="team-icon">😺</p>
+                <h3 class="team-name">Emma Taylor</h3>
+            </div>
+            <div class="team-card">
+                <p class="team-icon">😸</p>
+                <h3 class="team-name">Jake Olson</h3>
+            </div>
+            <div class="team-card">
+                <p class="team-icon">😻</p>
+                <h3 class="team-name">Nico San Esteban</h3>
+            </div>
+            <div class="team-card">
+                <p class="team-icon">😺</p>
+                <h3 class="team-name">Treston Failavollita</h3>
+            </div>
+            <div class="team-card">
+                <p class="team-icon">😾</p>
+                <h3 class="team-name">Steven Kertes</h3>
+            </div>
         </div>
     </section>
 
     <!-- Values Section -->
-    <h2>Our Values 💝</h2>
-    
-    <section>
-        <div>
-            <p>🎯</p>
-            <h3>Simplicity</h3>
-            <p>Saving should be easy, not complicated.</p>
+<section class="values-wrapper">
+    <h2 class="section-heading">Our Values 💝</h2>
+    <div class="values-grid">
+        <div class="value-item">
+            <p class="values-icon">🎯</p>
+            <h3 class="value-title">Simplicity</h3>
+            <p class="value-text">Saving should be easy, not complicated.</p>
         </div>
 
-        <div>
-            <p>💖</p>
-            <h3>Empowerment</h3>
-            <p>We help young adults take control of their financial future.</p>
+        <div class="value-item">
+            <p class="values-icon">💖</p>
+            <h3 class="value-title">Empowerment</h3>
+            <p class="value-text">We help young adults take control of their financial future.</p>
         </div>
 
-        <div>
-            <p>✨</p>
-            <h3>Fun</h3>
-            <p>Who says saving can't be enjoyable?</p>
+        <div class="value-item">
+            <p class="values-icon">✨</p>
+            <h3 class="value-title">Fun</h3>
+            <p class="value-text">Who says saving can't be enjoyable?</p>
         </div>
-    </section>
+    </div>
+</section>
 
 </body>
 </html>
