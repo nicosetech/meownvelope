@@ -14,5 +14,9 @@ def about():
 def support():
     return render_template('support.html')
 
+@app.route('/info')
+def info():
+    return render_template('info.html')
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000)

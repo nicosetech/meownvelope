@@ -4,15 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meownvelope - Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to Meownvelope!</h1>
-    <p>Your personal finance companion.</p>
-    
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/support">Support</a>
-    </nav>
+    <!-- Navigation -->
+    <header class=" navbar">
+        <div class="nav-logo">
+            <img src="/static/images/Cat_Cash_Logo.png" alt="Logo" width="50">
+            <span>Meownvelope</span>
+        </div>
+        <nav class=" nav-links">
+            <a href="/">Home</a>
+            <a href="/info">Info</a>
+            <a href="/about">About Us</a>
+            <a href="/support">Support</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img class="hero-img" src="/static/images/cat_Cash_Logo.png" alt="Cat with envelope" width="300">
+        <h1 class="hero-title">Welcome to Meownvelope! 😺</h1>
+        <p class="hero-subtitle">Your purr-fect savings companion that makes managing money fun, easy, and rewarding!</p>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="card card-purple">
+            <p class="card-icon">💰</p>
+            <h3 class="card-title">Smart Savings Split</h3>
+            <p class="card-text">Our app tracks your spending and helps decide the perfect savings split for your lifestyle!</p>
+        </div>
+
+        <div class="card card-orange">
+            <p class="card-icon">📓</p>
+            <h3 class="card-title">Digital Envelopes</h3>
+            <p class="card-text">Create fun categories like physical envelopes—organize your savings with ease!</p>
+        </div>
+
+        <div class="card card-yellow">
+            <p class="card-icon">✨</p>
+            <h3 class="card-title">Automatic Maintenance</h3>
+            <p class="card-text">Set it and forget it! We maintain your savings goals while you focus on living life!</p>
+        </div>
+    </section>
+    <section class="cta-wrapper">
+        <section class ="cta">
+            <h2 class="cta-title">Ready to Start Saving?</h2>
+            <p class="cta-subtitle">Join other young adults who are building their financial future with Meownvelope!</p>
+            <a href="#" class="cta-button">Start Saving Meow! 🐾</a>
+        </section>
+    </section>
 </body>
 </html>

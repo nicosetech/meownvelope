@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meownvelope - Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (same as other pages) -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <img src="/static/images/Cat_Cash_Logo.png" alt="Logo" width="50">
+            <span>Meownvelope</span>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/info">Info</a>
+            <a href="/about">About Us</a>
+            <a href="/support">Support</a>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section class="info-hero">
+        <h1 class="info-title">How Meownvelope Works 📋</h1>
+        <p class="info-subtitle">Everything you need to know about your new favorite savings app!</p>
+    </section>
+    <!-- Features Grid -->
+    <section class="info-grid">
+        <div class="info-card info-purple">
+            <div class="info-icon">😺</div>
+            <h3 class="info-card-title">Envelope Budgeting</h3>
+            <p class="info-card-text">Inspired by the classic envelope method, we bring this proven savings technique into the digital age with fun, customizable categories.</p>
+        </div>
+
+        <div class="info-card info-orange">
+            <div class="info-icon">✉️</div>
+            <h3 class="info-card-title">Category Management</h3>
+            <p class="info-card-text">Create digital envelopes for different goals—vacation, emergency fund, new gadgets—and watch your savings grow in each one!</p>
+        </div>
+
+        <div class="info-card info-yellow">
+            <div class="info-icon">❤️</div>
+            <h3 class="info-card-title">Made for You</h3>
+            <p class="info-card-text">Our intelligent algorithm learns your spending habits and suggests personalized savings splits that actually work for your lifestyle.</p>
+        </div>
+
+        <div class="info-card info-green">
+            <div class="info-icon">✨</div>
+            <h3 class="info-card-title">Auto-Save Magic</h3>
+            <p class="info-card-text">Set your preferences once, and we'll automatically distribute your money into the right envelopes—no effort required!</p>
+        </div>
+    </section>
+
+</body>
+</html>
