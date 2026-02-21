@@ -27,6 +27,24 @@
         <h1 class="support-title">Contact Us 📮</h1>
         <p class="support-subtitle">Have questions about saving with Meownvelope? Our team is here to help you succeed!</p>
     </secction>
+    <!-- Success Message -->
+    {% if success %}
+        <div style="max-width: 600px; margin: 20px auto; padding: 15px; background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px; color: #155724;">
+            <strong>✅ Success!</strong> Your message has been sent. We'll get back to you soon!
+        </div>
+    {% endif %}
+    
+    <!-- Error Messages -->
+    {% if errors %}
+        <div style="max-width: 600px; margin: 20px auto; padding: 15px; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px; color: #721c24;">
+            <strong>⚠️ Please fix the following errors:</strong>
+            <ul style="margin: 10px 0 0 20px;">
+                {% for field, error in errors.items() %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
     <!-- Contact Form -->
     <section class="form-wrapper">
         <h2 class="form-heading">Send Us a Message 💌</h2>
@@ -38,7 +56,13 @@
             <input class="form-input" type="email" name="email" placeholder="your.email@example.com" required>
 
             <label class="form-label">Subject</label>
-            <input class="form-input" type="text" name="text" placeholder="What's this about?" required>
+            <select class="form-input" name="subject" required>
+                <option value="">What's this about?</option>
+                <option value="General">General</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Other">Other</option>
+            </select>
 
             <label class="form-label">Message</label>
             <textarea class="form-textarea" name="message" placeholder="Tell us what's on your mind..." required></textarea>
