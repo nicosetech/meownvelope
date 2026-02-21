@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meownvelope - Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (same as homepage) -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <img src="/static/images/Cat_Cash_Logo.png" alt="Logo" width="50">
+            <span>Meownvelope</span>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/info">Info</a>
+            <a href="/about">About Us</a>
+            <a href="/support">Support</a>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <secction class="support-hero">
+        <h1 class="support-title">Contact Us 📮</h1>
+        <p class="support-subtitle">Have questions about saving with Meownvelope? Our team is here to help you succeed!</p>
+    </secction>
+    <!-- Success Message -->
+    {% if success %}
+        <div style="max-width: 600px; margin: 20px auto; padding: 15px; background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px; color: #155724;">
+            <strong>✅ Success!</strong> Your message has been sent. We'll get back to you soon!
+        </div>
+    {% endif %}
+    
+    <!-- Error Messages -->
+    {% if errors %}
+        <div style="max-width: 600px; margin: 20px auto; padding: 15px; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px; color: #721c24;">
+            <strong>⚠️ Please fix the following errors:</strong>
+            <ul style="margin: 10px 0 0 20px;">
+                {% for field, error in errors.items() %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <!-- Contact Form -->
+    <section class="form-wrapper">
+        <h2 class="form-heading">Send Us a Message 💌</h2>
+        <form class="contact-form" action="/support" method="POST">
+            <label class="form-label">Your Name</label>
+            <input class="form-input" type="text" name="name" placeholder="Enter your name" required>
+
+            <label class="form-label">Email Address</label>
+            <input class="form-input" type="email" name="email" placeholder="your.email@example.com" required>
+
+            <label class="form-label">Subject</label>
+            <select class="form-input" name="subject" required>
+                <option value="">What's this about?</option>
+                <option value="General">General</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="Feature Request">Feature Request</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+
+            <button class="form-button" type="submit">Send Message 🚀</button>
+        </form>
+    </section>
+
+</body>
+</html>
