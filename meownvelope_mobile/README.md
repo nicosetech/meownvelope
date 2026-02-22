@@ -1,17 +1,16 @@
-# meownvelope_mobile
+# Meownvelope Mobile
 
-A new Flutter project.
+Compiled on versions:
+- Flutter: 3.41.2 (stable)
+- OpenJDK: 21.0.9
+- Android SDK: 37.0.0-rc1
+- Android Studio: 2025.3.1 (Panda 1)
+- Visual Studio Comunity: 2022 17.12.3
+- OS: Windows 10
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
+Resources:
+- [Quick Install](https://docs.flutter.dev/install/with-vs-code)
+- [Install specific Flutter SDK](https://docs.flutter.dev/install/manual)
 - [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
 - [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
