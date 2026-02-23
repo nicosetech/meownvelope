@@ -6,7 +6,7 @@ from forms import validate_contact_form
 from emailservice import send_support_email
 
 #Setup Environment
-load_dotenv('env')
+load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
