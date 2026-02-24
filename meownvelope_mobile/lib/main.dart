@@ -5,8 +5,9 @@ import 'package:meownvelope_mobile/utils/hive/hive_database.dart';
 import 'package:path_provider/path_provider.dart';
 
 void main() async{
-  
-  HiveDatabase.initHiveDatabase();
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await HiveDatabase.initHiveDatabase();
 
   runApp(const ExamplePage());
   
