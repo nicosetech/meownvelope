@@ -48,7 +48,35 @@ Thumbs.db
 *.mov
 *.wmv
 
-#FLASK
+##-----------FLASK#-----------
 webapp/venv/
 webapp/.env
 .venv/
+
+#-----------Flutter#-----------
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+meownvelope_mobile/.idea/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+meownvelope_mobile/.dart_tool/
+meownvelope_mobile/.flutter-plugins-dependencies
+meownvelope_mobile/.pub-cache/
+meownvelope_mobile/.pub/
+meownvelope_mobile/build/
+meownvelope_mobile/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+meownvelope_mobile/android/app/debug
+meownvelope_mobile/android/app/profile
+meownvelope_mobile/android/app/release
