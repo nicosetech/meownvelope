@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meownvelope_mobile/FlutterTestingPages/envelope_creation_page.dart';
 
 class ExampleHomePage extends StatefulWidget {
   const ExampleHomePage({super.key, required this.title});
@@ -78,8 +79,10 @@ class _ExampleHomePageState extends State<ExampleHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => const EnvelopeCreationPage(),));
+        },
+        tooltip: 'Create Envelope',
         child: const Icon(Icons.add),
       ),
     );
