@@ -60,9 +60,21 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
     ),
   );
 
+  //  ── Envelope Type Display ───────────────────────────────────────────────
+
+  @override
+  void initState() {
+    super.initState();
+    _nameController.addListener((){
+      setState(() {});
+    });
+  }
+  
+
   // ── Save to Hive ───────────────────────────────────────────────
   Future<void> _createEnvelope() async {
     final name = _nameController.text.trim();
+    const nonInclusive = {'/','"','\'','*','\\', '#',};
 
     if (name.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -71,15 +83,33 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
       return;
     }
 
-    double? goal;
-    if (_goalController.text.isNotEmpty) {
-      goal = double.tryParse(_goalController.text);
-      if (goal == null) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Please enter a valid goal amount')),
-        );
-        return;
-      }
+    if (name.length > 20) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Name must be 20 characters or less')),
+      );
+      return;
+    }
+
+    if (nonInclusive.any((char) => name.contains(char))) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Name contains invalid characters')),
+      );
+      return;
+    }
+
+    if (_goalController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please enter a goal amount'))
+      );
+    return;
+    }
+
+    double goal = double.tryParse(_goalController.text)!;
+    if (goal < 0) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Goal must be greater than 0')),
+      );
+      return;
     }
 
  // await HiveDatabase.newEnvelope(name, _selectedColor.value, goal!, 0.0, HiveDatabase.EnvelopeOrder(_placeAtStart),);
@@ -397,3 +427,5 @@ Widget build(BuildContext context) {
 // Navigator.push(context, MaterialPageRoute(
 //   builder: (_) => const EnvelopeCreationPage(),
 // ));
+
+
