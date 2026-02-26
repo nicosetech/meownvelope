@@ -51,6 +51,22 @@ class HiveDatabase{
     ));
   }
 
+  static Future<int> envelopeOrder(bool placeAtStart) async{
+
+    final enevelopes = getEnvelopes();
+
+    if (placeAtStart) {
+      for (final envelope in enevelopes.values) {
+        envelope.displayOrder = envelope.displayOrder + 1;
+        enevelopes.put(envelope.key, envelope);
+      }
+      return 1;
+    }
+    else {
+      return enevelopes.length + 1;
+    }
+  }
+
   static Future<void> clearData() async {
     Box envelopes = getEnvelopes();
     Box transactions = getTransactions();
