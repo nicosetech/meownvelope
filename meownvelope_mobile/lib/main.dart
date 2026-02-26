@@ -8,7 +8,7 @@ void main() async{
 
   WidgetsFlutterBinding.ensureInitialized();
   await HiveDatabase.initHiveDatabase();
-  await Hive.openBox('envelopes');
+  
   runApp(const ExamplePage());
   
 }
