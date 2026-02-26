@@ -112,16 +112,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
       return;
     }
 
- // await HiveDatabase.newEnvelope(name, _selectedColor.value, goal!, 0.0, HiveDatabase.EnvelopeOrder(_placeAtStart),);
-
-    final box = Hive.box('envelopes');
-    await box.add({
-      'name': name,
-      'color': _selectedColor.value,
-      'goal': goal,
-      'placeAtStart': _placeAtStart,
-      'balance': 0.0,
-    });
+    await HiveDatabase.newEnvelope(name, _selectedColor.value, goal!, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
 
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
