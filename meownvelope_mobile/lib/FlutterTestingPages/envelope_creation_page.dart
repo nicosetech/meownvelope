@@ -127,35 +127,40 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
     return Scaffold(
       backgroundColor: _bgColor,
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final h = constraints.maxHeight;
+            final w = constraints.maxWidth;
+            return SingleChildScrollView(
+              physics: const NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.symmetric(horizontal: w * 0.06, vertical: h * 0.02),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
 
               // ── TOP HEADER: paw + title ──────────────────────────
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    width: 48,
-                    height: 48,
-                    child: Image.asset('assets/Cat_Paw.png',width: 48,height: 48,color:_blueText,),
+                  SizedBox(
+                    width: w * 0.11,
+                    height: w * 0.11,
+                    child: Image.asset('assets/Cat_Paw.png',width: w * 0.11,height: h * 0.11,color:_blueText,),
                   ),
-                  const SizedBox(width: 10),
+                  SizedBox(width: w * 0.02),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Meownvelope',
                         style: GoogleFonts.mochiyPopPOne(
-                          textStyle: TextStyle(fontSize: 30, color: _blueText),
+                          textStyle: TextStyle(fontSize: w * 0.06, color: _blueText),
                           ),
                         ),
                       Padding(
-                        padding: const EdgeInsets.only(left:180),
+                        padding: EdgeInsets.only(left: w * 0.3),
                         child: Text("Creation",
                           style: GoogleFonts.mochiyPopPOne(
-                            textStyle: TextStyle(fontSize:30, color: _blueText),
+                            textStyle: TextStyle(fontSize: w * 0.06, color: _blueText),
                           ),
                         ),
                       ),
@@ -163,7 +168,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 40),
+              SizedBox(height: h * 0.04),
 
               // ── ENVELOPE NAME INPUT ──────────────────────────────
               Center(
@@ -171,14 +176,14 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   alignment: Alignment.centerRight,
                   children: [
                     SizedBox(
-                      width: 320,
+                      width: w * 0.75,
                       child: TextField(
                         controller: _nameController,
                         textAlign: TextAlign.center,
-                        style: _monoStyle(28, _blueText),
+                        style: _monoStyle(w * 0.065, _blueText),
                         decoration: InputDecoration(
                           hintText: 'New Envelope',
-                          hintStyle: _monoStyle(20, _blueText.withOpacity(0.5), letterSpacing: 1.2),
+                          hintStyle: _monoStyle(w * 0.05, _blueText.withOpacity(0.5), letterSpacing: 1.2),
                           border: UnderlineInputBorder(borderSide: BorderSide(color: _blueText)),
                           focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: _blueText, width: 2)),
                           enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: _blueText.withOpacity(0.5))),
@@ -186,27 +191,27 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                       ),
                     ),
                     Positioned(
-                      right: -10,
+                      right: w * -0.02,
                       child: Image.asset(
                         'assets/Vector.png',
-                        width: 50,
-                        height: 50,
+                        width: w * 0.12,
+                        height: h * 0.12,
                         color: _blueText,)
 
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 60),
+              SizedBox(height: h * 0.06),
 
               // ── ENVELOPE PREVIEW + COLOR PICKER ─────────────────
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Expanded(
-                    flex: 3,
+                    flex: 4,
                     child: Container(
-                      height: 180,
+                      height: h * 0.20,
                       decoration: BoxDecoration(
                         color: _selectedColor,
                         borderRadius: BorderRadius.circular(12),
@@ -218,14 +223,14 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                             'assets/Envelope.png',
                             fit: BoxFit.fill,
                             width: double.infinity,
-                            height: 200,
+                            height: h * 0.20,
                           ),
                           Positioned(
                             top: 10,
                             child:
                             Text(
                               _nameController.text.isEmpty ? 'New Envelope' : _nameController.text,
-                              style: _monoStyle(18,_blueText.withOpacity(0.8),
+                              style: _monoStyle(w * 0.037,_blueText.withOpacity(0.8),
                             ),
                           ),
                           ),
@@ -233,7 +238,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(width: 30),
+                  SizedBox(width: w * 0.07),
                   Expanded(
                     flex: 2,
                     child: GridView.builder(
@@ -265,7 +270,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 60),
+              SizedBox(height: h * 0.06),
 
               // ── PLACEMENT RADIO BUTTONS ──────────────────────────
               _PlacementOption(
@@ -275,7 +280,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                 activeColor: _blueText,
                 onChanged: (val) => setState(() => _placeAtStart = val!),
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: h * 0.03),
               _PlacementOption(
                 label: 'Place my envelope at the\n end of my list.',
                 value: false,
@@ -283,25 +288,25 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                 activeColor: _blueText,
                 onChanged: (val) => setState(() => _placeAtStart = val!),
               ),
-              const SizedBox(height: 50),
+              SizedBox(height: h * 0.05),
 
               // ── ENVELOPE GOAL ────────────────────────────────────
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Envelope goal:',
-                    style: _monoStyle(25, _blueText,),
+                    style: _monoStyle(w * 0.055, _blueText,),
                   ),
                   Text("\$",
-                    style: _monoStyle(35, _blueText),
+                    style: _monoStyle( w * 0.055, _blueText),
                   ),
-                  const SizedBox(width: 6),
+                  SizedBox(width: w * 0.015),
                   SizedBox(
-                    width: 70,
+                    width: w * 0.18,
                     child: TextField(
                       controller: _goalController,
                       keyboardType: TextInputType.number,
-                      style: _monoStyle(18, _blueText,),
+                      style: _monoStyle(w * 0.04, _blueText,),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                         enabledBorder: OutlineInputBorder(
@@ -317,7 +322,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 70),
+              SizedBox(height: h * 0.07),
 
               // ── CREATE / CANCEL BUTTONS ──────────────────────────
               Row(
@@ -328,36 +333,33 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: _btnColor,
                         foregroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        padding: EdgeInsets.symmetric(vertical: h * 0.018),
                         elevation: 0,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
-                      child: const Text('Create',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                          child: Text('Create', style: _monoStyle(w * 0.04, Colors.white)),
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 16),
+                  SizedBox(width: w * 0.04),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () => Navigator.pop(context),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: _btnColor,
                         foregroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        padding: EdgeInsets.symmetric(vertical: h * 0.018),
                         elevation: 0,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
-                      child: const Text('Cancel',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                          child: Text('Cancel', style: _monoStyle(w * 0.04, Colors.white)),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ],
               ),
-              const SizedBox(height: 0),
-            ],
-          ),
+            );
+          },
         ),
       ),
     );
