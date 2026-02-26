@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -90,13 +91,6 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
       return;
     }
 
-    if (nonInclusive.any((char) => name.contains(char))) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Name contains invalid characters')),
-      );
-      return;
-    }
-
     if (_goalController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please enter a goal amount'))
@@ -105,14 +99,14 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
     }
 
     double goal = double.tryParse(_goalController.text)!;
-    if (goal < 0) {
+    if (goal <= 0) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Goal must be greater than 0')),
       );
       return;
     }
 
-    await HiveDatabase.newEnvelope(name, _selectedColor.value, goal!, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
+    await HiveDatabase.newEnvelope(name, _selectedColor.value, goal, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
 
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -133,7 +127,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
             final w = constraints.maxWidth;
             return SingleChildScrollView(
               physics: const NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.symmetric(horizontal: w * 0.06, vertical: h * 0.02),
+              padding: EdgeInsets.fromLTRB( w * 0.06, h * 0.02, w * 0.06, h * 0.05),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -178,6 +172,15 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                     SizedBox(
                       width: w * 0.75,
                       child: TextField(
+                        inputFormatters: [
+                          LengthLimitingTextInputFormatter(15),
+                          FilteringTextInputFormatter.deny("/"),
+                          FilteringTextInputFormatter.deny('"'),
+                          FilteringTextInputFormatter.deny("'"),
+                          FilteringTextInputFormatter.deny("*"),
+                          FilteringTextInputFormatter.deny("\\"),
+                          FilteringTextInputFormatter.deny("#"),
+                        ],
                         controller: _nameController,
                         textAlign: TextAlign.center,
                         style: _monoStyle(w * 0.065, _blueText),
@@ -274,7 +277,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
 
               // ── PLACEMENT RADIO BUTTONS ──────────────────────────
               _PlacementOption(
-                label: 'Place my envelope at the\n start of my list.',
+                label: 'Place my envelope at the start of my list.',
                 value: true,
                 groupValue: _placeAtStart,
                 activeColor: _blueText,
@@ -282,7 +285,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
               ),
               SizedBox(height: h * 0.03),
               _PlacementOption(
-                label: 'Place my envelope at the\n end of my list.',
+                label: 'Place my envelope at the end of my list.',
                 value: false,
                 groupValue: _placeAtStart,
                 activeColor: _blueText,
