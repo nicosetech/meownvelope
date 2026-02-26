@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:meownvelope_mobile/utils/hive/hive_database.dart';
 
 // No code generation needed — envelopes are stored as Maps in Hive
 // {
@@ -25,24 +27,38 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
 
   // ── Preset colors (matches design grid) ────────────────────────
   final List<Color> _presetColors = [
-    const Color(0xFFFFB3B3), // pink
-    const Color(0xFFFFE0A3), // yellow
-    const Color(0xFFB3F0C0), // green
-    const Color(0xFFD9B3FF), // purple
-    const Color(0xFFB3D9FF), // blue
-    const Color(0xFFD3D3D3), // grey
-    const Color(0xFFFFCCE5), // light pink
-    const Color(0xFFB3FFEE), // mint
+  const Color(0xFFFFCCCC), // pink
+  const Color(0xFFFFEDCC), // yellow
+  const Color(0xFFCCF5D5), // green
+  const Color(0xFFE8CCFF), // purple
+  const Color(0xFFCCE5FF), // blue
+  const Color(0xFFE8E8E8), // grey
+  const Color(0xFFFFE5F2), // light pink
+  const Color(0xFFCCFFED), // mint
+  const Color(0xFFFFFFFF), // white
   ];
 
-  Color _selectedColor = const Color(0xFFFFB3B3); // default pink
+  Color _selectedColor = const Color(0xFFFFFFFF); // default white
   bool _placeAtStart = true;
 
   // ── App colors ─────────────────────────────────────────────────
-  static const Color _bgColor      = Color(0xFFD6E4EF); // page background
+  static const Color _bgColor      = Color(0xFFF0F6FA); // page background
   static const Color _blueText     = Color(0xFF5B87B0); // main blue text
   static const Color _btnColor     = Color(0xFF7AAAC8); // button blue
-  static const Color _backBtnColor = Color(0xFF5B7FA6); // back button darker blue
+
+  // ── Fonts ─────────────────────────────────────────────────────
+  static TextStyle _monoStyle(double size, Color color, {
+    double? letterSpacing,
+    FontStyle? fontStyle,
+  }) => GoogleFonts.martianMono(
+    textStyle: TextStyle(
+      fontSize: size,
+      color: color,
+      fontWeight: FontWeight.w600,
+      letterSpacing: letterSpacing,
+      fontStyle: fontStyle,
+    ),
+  );
 
   // ── Save to Hive ───────────────────────────────────────────────
   Future<void> _createEnvelope() async {
@@ -65,6 +81,8 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
         return;
       }
     }
+
+ // await HiveDatabase.newEnvelope(name, _selectedColor.value, goal!, 0.0, HiveDatabase.EnvelopeOrder(_placeAtStart),);
 
     final box = Hive.box('envelopes');
     await box.add({
@@ -96,7 +114,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
 
               // ── TOP HEADER: paw + title ──────────────────────────
               Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     width: 48,
@@ -107,8 +125,18 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Meownvelope Creation',
-                        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: _blueText, letterSpacing: 0.5),
+                      Text('Meownvelope',
+                        style: GoogleFonts.mochiyPopPOne(
+                          textStyle: TextStyle(fontSize: 30, color: _blueText),
+                          ),
+                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(left:180),
+                        child: Text("Creation",
+                          style: GoogleFonts.mochiyPopPOne(
+                            textStyle: TextStyle(fontSize:30, color: _blueText),
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -122,14 +150,14 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   alignment: Alignment.centerRight,
                   children: [
                     SizedBox(
-                      width: 260,
+                      width: 320,
                       child: TextField(
                         controller: _nameController,
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 40, color: _blueText, fontWeight: FontWeight.w500, letterSpacing: 1.2),
+                        style: _monoStyle(28, _blueText),
                         decoration: InputDecoration(
                           hintText: 'New Envelope',
-                          hintStyle: TextStyle(color: _blueText.withOpacity(0.5), fontSize: 30, letterSpacing: 1.2),
+                          hintStyle: _monoStyle(20, _blueText.withOpacity(0.5), letterSpacing: 1.2),
                           border: UnderlineInputBorder(borderSide: BorderSide(color: _blueText)),
                           focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: _blueText, width: 2)),
                           enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: _blueText.withOpacity(0.5))),
@@ -157,7 +185,11 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   Expanded(
                     flex: 3,
                     child: Container(
-                      height: 120,
+                      height: 180,
+                      decoration: BoxDecoration(
+                        color: _selectedColor,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                       child:Stack(
                         alignment: Alignment.center,
                         children: [
@@ -165,17 +197,14 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                             'assets/Envelope.png',
                             fit: BoxFit.fill,
                             width: double.infinity,
-                            height: 120,
+                            height: 200,
                           ),
                           Positioned(
                             top: 10,
                             child:
                             Text(
                               _nameController.text.isEmpty ? 'New Envelope' : _nameController.text,
-                              style: TextStyle(
-                                color: _blueText.withOpacity(0.8),
-                                fontSize: 18,
-                                fontWeight: FontWeight.w500,
+                              style: _monoStyle(18,_blueText.withOpacity(0.8),
                             ),
                           ),
                           ),
@@ -191,21 +220,11 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                       physics: const NeverScrollableScrollPhysics(),
                       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
-                        crossAxisSpacing: 6,
-                        mainAxisSpacing: 6,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
                       ),
-                      itemCount: _presetColors.length + 1,
+                      itemCount: _presetColors.length,
                       itemBuilder: (context, index) {
-                        if (index == _presetColors.length) {
-                          return Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.6),
-                              border: Border.all(color: _blueText.withOpacity(0.4)),
-                              borderRadius: BorderRadius.circular(6),
-                            ),
-                            child: Icon(Icons.add, color: _blueText, size: 18),
-                          );
-                        }
                         final color = _presetColors[index];
                         final isSelected = _selectedColor == color;
                         return GestureDetector(
@@ -213,10 +232,10 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                           child: Container(
                             decoration: BoxDecoration(
                               color: color,
-                              borderRadius: BorderRadius.circular(6),
+                              borderRadius: BorderRadius.circular(1),
                               border: isSelected
                                   ? Border.all(color: _blueText, width: 2.5)
-                                  : Border.all(color: Colors.transparent),
+                                  : Border.all(color: _blueText.withOpacity(1), width: 2),
                             ),
                           ),
                         );
@@ -225,19 +244,19 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 60),
 
               // ── PLACEMENT RADIO BUTTONS ──────────────────────────
               _PlacementOption(
-                label: 'Place my envelope at the start of my list.',
+                label: 'Place my envelope at the\n start of my list.',
                 value: true,
                 groupValue: _placeAtStart,
                 activeColor: _blueText,
                 onChanged: (val) => setState(() => _placeAtStart = val!),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 30),
               _PlacementOption(
-                label: 'Place my envelope at the end of my list.',
+                label: 'Place my envelope at the\n end of my list.',
                 value: false,
                 groupValue: _placeAtStart,
                 activeColor: _blueText,
@@ -249,14 +268,19 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Envelope goal:  \$  ',
-                    style: TextStyle(fontSize: 30, color: _blueText, fontWeight: FontWeight.w500),
+                  Text('Envelope goal:',
+                    style: _monoStyle(25, _blueText,),
                   ),
+                  Text("\$",
+                    style: _monoStyle(35, _blueText),
+                  ),
+                  const SizedBox(width: 6),
                   SizedBox(
-                    width: 120,
+                    width: 70,
                     child: TextField(
                       controller: _goalController,
                       keyboardType: TextInputType.number,
+                      style: _monoStyle(18, _blueText,),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                         enabledBorder: OutlineInputBorder(
@@ -272,7 +296,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 100),
+              const SizedBox(height: 70),
 
               // ── CREATE / CANCEL BUTTONS ──────────────────────────
               Row(
@@ -337,56 +361,33 @@ class _PlacementOption extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     return Row(
       children: [
-        Radio<bool>(
-          value: value,
-          groupValue: groupValue,
-          onChanged: onChanged,
-          activeColor: activeColor,
+        Transform.scale(
+          scale: 1.8,
+          child: Radio<bool>(
+            value: value,
+            groupValue: groupValue,
+            onChanged: onChanged,
+            activeColor: activeColor,
+            fillColor: MaterialStateProperty.all(activeColor),
+          ),
         ),
-        Text(label, style: TextStyle(fontSize: 17, color: activeColor)),
+        const SizedBox(width:10),
+        Expanded(
+          child: Text(label, style: GoogleFonts.martianMono(
+            textStyle: TextStyle(
+              fontSize: 17,
+              color: activeColor,
+              fontWeight: FontWeight.w600,
+              height: 1.8,
+            ),
+          )),
+        ),
       ],
     );
   }
-}
-
-// ─── Envelope Painter ─────────────────────────────────────────────────────────
-
-class _EnvelopePainter extends CustomPainter {
-  final Color color;
-  _EnvelopePainter({required this.color});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.5;
-
-    // Left and right edges
-    canvas.drawLine(Offset(0, 0), Offset(0, size.height), paint);
-    canvas.drawLine(Offset(size.width, 0), Offset(size.width, size.height), paint);
-
-    // Top flap V
-    final flapPath = Path()
-      ..moveTo(0, 0)
-      ..lineTo(size.width / 2, size.height * 0.45)
-      ..lineTo(size.width, 0);
-    canvas.drawPath(flapPath, paint);
-
-    // Bottom V
-    final bottomPath = Path()
-      ..moveTo(0, size.height)
-      ..lineTo(size.width / 2, size.height * 0.55)
-      ..lineTo(size.width, size.height);
-    canvas.drawPath(bottomPath, paint);
-  }
-
-  @override
-  bool shouldRepaint(_EnvelopePainter oldDelegate) =>
-      oldDelegate.color != color;
 }
 
 // ─── Hive Setup in main.dart ──────────────────────────────────────────────────
