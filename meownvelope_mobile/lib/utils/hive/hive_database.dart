@@ -4,55 +4,67 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:meownvelope_mobile/DataTypes/envelope_data.dart';
+import 'package:meownvelope_mobile/DataTypes/transaction_data.dart';
 import 'package:path_provider/path_provider.dart';
 
 class HiveDatabase{
   static Future<void> initHiveDatabase() async {
     final dir = await getApplicationDocumentsDirectory();
     Hive.init(dir.path);
+    Hive.registerAdapter<EnvelopeData>(EnvelopeDataAdapter());
+    Hive.registerAdapter<TransactionData>(TransactionDataAdapter());
 
-    await Hive.openBox("envelopes");
-    await Hive.openBox("transactions");
+    await Hive.openBox<EnvelopeData>("envelopes");
+    await Hive.openBox<TransactionData>("transactions");
   }
   
-  static Box getEnvelopes(){
+  static Box<EnvelopeData> getEnvelopes(){
     try{
-      return Hive.box("envelopes");
+      return Hive.box<EnvelopeData>("envelopes");
     }catch(e){
       throw Exception("Envelopes box not initialized");
     }
   }
 
-  static Box getTransactions(){
+  static Box<TransactionData> getTransactions(){
     try{
-      return Hive.box("transactions");
+      return Hive.box<TransactionData>("transactions");
     }catch(e){
       throw Exception("Transactions box not initialized");
     }
   }
 
-  static void newEnvelope(String name, int color, double budgetTarget, double balance, int displayOrder){
+  static Future<void> newEnvelope(String name, int color, double budgetTarget, double balance, int displayOrder) async{
     Box? envelopes = getEnvelopes();
-    envelopes.add({
-      "name": name,
-      "color": color,
-      "local": true,
-      "budgetTarget": budgetTarget,
-      "balance": balance,
-      "displayOrder": displayOrder,
-      "users": <Int, String>{}
-    });
+    envelopes.add(EnvelopeData(name: name, color: color, budgetTarget: budgetTarget, balance: balance, displayOrder: displayOrder, local: true, users: {}));
   }
 
-  static void newTransaction(int? wEnvelopeId, int? dEnvelopeId, double amount, int? source){
+  static Future<void> newTransaction(EnvelopeData? wEnvelopeId, EnvelopeData? dEnvelopeId, double amount, int? source) async{
     Box? transactions = getTransactions();
-    transactions.add({
-      "wEnvelopeId": wEnvelopeId,
-      "dEnvelopeId": dEnvelopeId,
-      "amount": amount,
-      "date": DateTime.now(),
-      "source": source
-    });
+    transactions.add(TransactionData(
+      wEnvelope: wEnvelopeId,
+      dEnvelope: dEnvelopeId,
+      amount: amount,
+      timeStamp: DateTime.now(),
+      source: source
+    ));
+  }
+
+  static Future<int> envelopeOrder(bool placeAtStart) async{
+
+    final enevelopes = getEnvelopes();
+
+    if (placeAtStart) {
+      for (final envelope in enevelopes.values) {
+        envelope.displayOrder = envelope.displayOrder + 1;
+        enevelopes.put(envelope.key, envelope);
+      }
+      return 1;
+    }
+    else {
+      return enevelopes.length + 1;
+    }
   }
 
   static Future<void> clearData() async {
