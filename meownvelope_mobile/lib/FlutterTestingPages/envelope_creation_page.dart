@@ -96,28 +96,27 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
       );
     return;
     }
-    try {
-      double goal = double.tryParse(_goalController.text)!;
-      if (goal <= 0) {
-        ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Goal must be greater than 0')),
-        );
-        return;
-      }
-      if (goal <= 0) {
-        ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Goal must be greater than 0')),
-        );
-        return;
-      }
-
-      await HiveDatabase.newEnvelope(name, _selectedColor.value, goal, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
-
-    } on Exception catch (exception) {
+    double? goal = double.tryParse(_goalController.text);
+    if (goal == null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Goal must me a valid number')),
+        const SnackBar(content: Text('Please enter a valid number for the goal'))
       );
+      return;
     }
+    if (goal <= 0) {
+      ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Goal must be greater than 0')),
+      );
+      return;
+    }
+    if (goal <= 0) {
+      ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Goal must be greater than 0')),
+      );
+      return;
+    }
+
+    await HiveDatabase.newEnvelope(name, _selectedColor.value, goal, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
 
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
