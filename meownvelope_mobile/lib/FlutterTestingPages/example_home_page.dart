@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meownvelope_mobile/FlutterTestingPages/envelope_creation_page.dart';
 
 class ExampleHomePage extends StatefulWidget {
   const ExampleHomePage({super.key, required this.title});
@@ -21,16 +22,6 @@ class ExampleHomePage extends StatefulWidget {
 class _ExampleHomePageState extends State<ExampleHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,8 +69,10 @@ class _ExampleHomePageState extends State<ExampleHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => const EnvelopeCreationPage(),));
+        },
+        tooltip: 'Create Envelope',
         child: const Icon(Icons.add),
       ),
     );

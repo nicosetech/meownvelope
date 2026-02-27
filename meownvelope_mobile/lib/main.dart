@@ -8,7 +8,6 @@ void main() async{
 
   WidgetsFlutterBinding.ensureInitialized();
   await HiveDatabase.initHiveDatabase();
-
   runApp(const ExamplePage());
   
 }
