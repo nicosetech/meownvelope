@@ -75,7 +75,6 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
   // ── Save to Hive ───────────────────────────────────────────────
   Future<void> _createEnvelope() async {
     final name = _nameController.text.trim();
-    const nonInclusive = {'/','"','\'','*','\\', '#',};
 
     if (name.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -97,16 +96,28 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
       );
     return;
     }
-
-    double goal = double.tryParse(_goalController.text)!;
-    if (goal <= 0) {
-      ScaffoldMessenger.of(context).showSnackBar(
+    try {
+      double goal = double.tryParse(_goalController.text)!;
+      if (goal <= 0) {
+        ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Goal must be greater than 0')),
-      );
-      return;
-    }
+        );
+        return;
+      }
+      if (goal <= 0) {
+        ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Goal must be greater than 0')),
+        );
+        return;
+      }
 
-    await HiveDatabase.newEnvelope(name, _selectedColor.value, goal, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
+      await HiveDatabase.newEnvelope(name, _selectedColor.value, goal, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
+
+    } on Exception catch (exception) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Goal must me a valid number')),
+      );
+    }
 
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -123,10 +134,10 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
-            final h = constraints.maxHeight;
-            final w = constraints.maxWidth;
+            final h = MediaQuery.of(context).size.height * 0.9;
+            final w = MediaQuery.of(context).size.width; 
             return SingleChildScrollView(
-              physics: const NeverScrollableScrollPhysics(),
+              physics: const ClampingScrollPhysics(),
               padding: EdgeInsets.fromLTRB( w * 0.06, h * 0.02, w * 0.06, h * 0.05),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -246,7 +257,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                     flex: 2,
                     child: GridView.builder(
                       shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
+                      physics: const ClampingScrollPhysics(),
                       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         crossAxisSpacing: 10,
@@ -307,6 +318,10 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   SizedBox(
                     width: w * 0.18,
                     child: TextField(
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(10),
+                        FilteringTextInputFormatter.allow(RegExp(r'^\d*.?\d{0,2}'),),
+                      ],
                       controller: _goalController,
                       keyboardType: TextInputType.number,
                       style: _monoStyle(w * 0.04, _blueText,),
