@@ -5,15 +5,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meownvelope_mobile/utils/hive/hive_database.dart';
 
-// No code generation needed — envelopes are stored as Maps in Hive
-// {
-//   'name': 'Groceries',
-//   'color': 4294940672,
-//   'goal': 100.0,
-//   'placeAtStart': true,
-//   'balance': 0.0,
-// }
-
 class EnvelopeCreationPage extends StatefulWidget {
   const EnvelopeCreationPage({super.key});
 
@@ -206,7 +197,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                     Positioned(
                       right: w * -0.02,
                       child: Image.asset(
-                        'assets/Vector.png',
+                        'assets/Pencil_Symbol.png',
                         width: w * 0.12,
                         height: h * 0.12,
                         color: _blueText,)
