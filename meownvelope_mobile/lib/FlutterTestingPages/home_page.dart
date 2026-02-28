@@ -44,12 +44,48 @@ class MeownvelopeApp extends StatelessWidget {
               Column(
                 children:[
                   // menu button
-                  Row(),
+                  Row(
+                    children: [
+                        Ink(
+                        decoration: BoxDecoration(
+                            color:medBlue, 
+                            borderRadius: BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8))),
+                        child: IconButton(
+                            icon: Icon(Icons.keyboard_double_arrow_right, color:darkerBlue),
+                            onPressed:(){ Text('pressed');}, // temporary until creation of menu bar
+                            ),
+                        ),
+                    ]
+                  ),
                   // cash visual
                   Container(), 
                   // buttons for importing and filling
                   Row(
-                    children: [ TextButton(), TextButton()]
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                        TextButton(
+                            style: TextButton.styleFrom(
+                                backgroundColor: darkerBlue,
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                                    )
+                                ),
+                            child: Text("Import Funds"),
+                            onPressed:(){ Text('pressed');} //temp until import funds page is made
+                        ), 
+                        TextButton(
+                            style: TextButton.styleFrom(
+                                backgroundColor: Color.fromARGB(255, 49, 102, 128),
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: const BorderRadius.all(Radius.circular(8)),
+                                    )
+                                ),
+                            child: Text("Fill Envelopes"),
+                            onPressed:(){ Text('pressed');}, //temp until fill envelopes page is made
+                        )
+                    ]
                   )
                 ]
               ), 
