@@ -58,7 +58,17 @@ class MeownvelopeApp extends StatelessWidget {
                     ]
                   ),
                   // cash visual
-                  Container(), 
+                  Container(
+                    width: 150, 
+                    height:100,
+                    padding: EdgeInsets.only(bottom: 20,top:50, left:20, right:20),
+                    child: DecoratedBox(
+                        decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 186, 210, 229),
+                            borderRadius: BorderRadius.all(Radius.elliptical(80,50))
+                        )
+                    ),
+                  ), 
                   // buttons for importing and filling
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -90,7 +100,19 @@ class MeownvelopeApp extends StatelessWidget {
                 ]
               ), 
               // bottom section that shows envelope previews 
-              Container()
+              SizedBox(width: 200, height:30), // for space between top and bottom sections
+              Container(
+                height: 220,
+                width: 200,
+                color: lightestBlue,
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  children: [ 
+                    Text("env 1"), Text("env 2"), Text("env 3"), Text("env 4"),
+                    Text("env 5"), Text("env 6"), Text("env 7"), Text("env 8") 
+                  ],
+                ),
+              )
             ]
           )
         )
