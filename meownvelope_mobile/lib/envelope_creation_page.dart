@@ -31,7 +31,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
   ];
 
   Color _selectedColor = const Color(0xFFFFFFFF); // default white
-  bool _placeAtStart = true;
+  bool _placeAtStart = true; // true is front of list, false is end of list
 
   // ── App colors ─────────────────────────────────────────────────
   static const Color _bgColor      = Color(0xFFF0F6FA); // page background
@@ -39,6 +39,8 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
   static const Color _btnColor     = Color(0xFF7AAAC8); // button blue
 
   // ── Fonts ─────────────────────────────────────────────────────
+
+  // Shared test style using Martian Mono font
   static TextStyle _monoStyle(double size, Color color, {
     double? letterSpacing,
     FontStyle? fontStyle,
@@ -52,8 +54,8 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
     ),
   );
 
-  //  ── Envelope Type Display ───────────────────────────────────────────────
 
+// Envelope preview updates in real time
   @override
   void initState() {
     super.initState();
@@ -100,12 +102,6 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
       );
       return;
     }
-    if (goal <= 0) {
-      ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Goal must be greater than 0')),
-      );
-      return;
-    }
 
     await HiveDatabase.newEnvelope(name, _selectedColor.value, goal, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
 
@@ -124,8 +120,8 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
-            final h = MediaQuery.of(context).size.height * 0.9;
-            final w = MediaQuery.of(context).size.width; 
+            final h = MediaQuery.of(context).size.height * 0.9; // height base
+            final w = MediaQuery.of(context).size.width; // width base
             return SingleChildScrollView(
               physics: const ClampingScrollPhysics(),
               padding: EdgeInsets.fromLTRB( w * 0.06, h * 0.02, w * 0.06, h * 0.05),
@@ -201,7 +197,6 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                         width: w * 0.12,
                         height: h * 0.12,
                         color: _blueText,)
-
                     ),
                   ],
                 ),
@@ -421,12 +416,5 @@ Widget build(BuildContext context) {
   }
 }
 
-// ─── Hive Setup in main.dart ──────────────────────────────────────────────────
-// await Hive.openBox('envelopes');
-//
-// Navigate to this page:
-// Navigator.push(context, MaterialPageRoute(
-//   builder: (_) => const EnvelopeCreationPage(),
-// ));
 
 
