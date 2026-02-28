@@ -27,7 +27,15 @@ class MeownvelopeApp extends StatelessWidget {
                 elevation: 0,
           ),
           //button at bottom right for new envelope
-          floatingActionButton: FloatingActionButton(),  
+          floatingActionButton: FloatingActionButton.extended(
+            backgroundColor: medBlue, 
+            shape: RoundedRectangleBorder( 
+                borderRadius: BorderRadius.all(Radius.circular(16))
+                ),
+                icon: Icon(Icons.add, color: darkerBlue),
+                label:Icon(Icons.mail_outline, color: darkerBlue),
+                onPressed: (){Text('pressed');}, //temporary until button is linked to envelope creation page
+          ),  
           
           //page layout
           body: Column(
