@@ -6,13 +6,26 @@ import 'package:meownvelope_mobile/utils/hive/hive_database.dart';
 
 class MeownvelopeApp extends StatelessWidget {
   const MeownvelopeApp({super.key});
+  static const Color darkerBlue = Color.fromARGB(255, 84, 115, 141); 
+  static const Color medBlue = Color.fromARGB(255, 183, 203, 220); 
+  static const Color lighterBlue = Color.fromARGB(255, 206, 221, 233); 
+  static const Color lightestBlue = Color.fromARGB(255, 222, 232, 239); 
+  static const Color backgroundBlue = Color.fromARGB(255, 230, 237, 241); 
+  
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-          // bar to display title and paw icon
-          appBar: AppBar(),
+            backgroundColor: backgroundBlue,
+            // bar to display title and paw icon
+            appBar: AppBar(
+                backgroundColor: backgroundBlue,
+                title: const Text("Meownvelope"),
+                leading: Icon(Icons.pets),
+                foregroundColor: darkerBlue,
+                elevation: 0,
+          ),
           //button at bottom right for new envelope
           floatingActionButton: FloatingActionButton(),  
           
