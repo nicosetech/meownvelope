@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meownvelope_mobile/FlutterTestingPages/envelope_creation_page.dart';
+import 'package:meownvelope_mobile/envelope_creation_page.dart';
 
 class ExampleHomePage extends StatefulWidget {
   const ExampleHomePage({super.key, required this.title});
