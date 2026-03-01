@@ -61,16 +61,19 @@ class MeownvelopeApp extends StatelessWidget {
                     ]
                   ),
                   // cash visual
-                  Container(
-                    width: 150, 
-                    height:160,
-                    padding: EdgeInsets.only(bottom: 30,top:100, left:15, right:15),
-                    child: DecoratedBox(
-                        decoration: BoxDecoration(
-                            color: medBlue,
-                            borderRadius: BorderRadius.all(Radius.elliptical(80,50))
-                        )
-                    ),
+                  Stack(
+                    children: [
+                        Image.asset('assets/leastcash.png', scale: 8, alignment: AlignmentGeometry.topStart,),
+                        Container(
+                            width: 150, 
+                            height:160,
+                            padding: EdgeInsets.only(bottom: 30,top:100, left:15, right:15),
+                            decoration: BoxDecoration(
+                                //color: medBlue,
+                                borderRadius: BorderRadius.all(Radius.elliptical(80,50))
+                                )
+                            ),
+                    ],
                   ), 
                   // buttons for importing and filling
                   Row(
