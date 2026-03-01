@@ -39,11 +39,12 @@ class MeownvelopeApp extends StatelessWidget {
           
           //page layout
           body: Column(
+            spacing: 40,
             children: [
               //top section to include menu button, cash visual, and buttons
               Column(
                 children:[
-                  SizedBox(width: 30, height:30), // for space between sections
+                  SizedBox(width: 30, height:20), // for space between sections
                   // menu button
                   Row(
                     children: [
@@ -62,19 +63,13 @@ class MeownvelopeApp extends StatelessWidget {
                   ),
                   // cash visual
                   Stack(
-                    children: [
-                        Image.asset('assets/leastcash.png', scale: 8, alignment: AlignmentGeometry.topStart,),
-                        Container(
-                            width: 150, 
-                            height:160,
-                            padding: EdgeInsets.only(bottom: 30,top:100, left:15, right:15),
-                            decoration: BoxDecoration(
-                                //color: medBlue,
-                                borderRadius: BorderRadius.all(Radius.elliptical(80,50))
-                                )
+                    alignment: AlignmentGeometry.centerStart,
+                        children: [
+                            Align(alignment: Alignment.bottomCenter, child: ClipOval(child: Container(width: 180, height: 60, decoration: BoxDecoration(color:medBlue)))
                             ),
-                    ],
-                  ), 
+                            Align(alignment: Alignment.center, child: Image.asset('assets/leastcash.png',width:150, height:120)),
+                        ] 
+                    ), 
                   // buttons for importing and filling
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -114,7 +109,7 @@ class MeownvelopeApp extends StatelessWidget {
                 ]
               ), 
               // bottom section that shows envelope previews 
-              SizedBox(width: 30, height:50), // for space between top and bottom sections
+              //SizedBox(width: 30, height:50), // for space between top and bottom sections
               Container( //background box containing envelope list
                 height: 450,
                 width: 380,
