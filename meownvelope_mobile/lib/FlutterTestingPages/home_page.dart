@@ -116,9 +116,8 @@ class MeownvelopeApp extends StatelessWidget {
                 color: lightestBlue,
                 child: GridView.count(
                   crossAxisCount: 2,
-                  children: [ 
-                    Text("env 1"), Text("env 2"), Text("env 3"), Text("env 4"),
-                    Text("env 5"), Text("env 6"), Text("env 7"), Text("env 8") 
+                  children: [
+                    envelopeBuilder(Colors.white, "Groceries")
                   ],
                 ),
               )
@@ -127,4 +126,16 @@ class MeownvelopeApp extends StatelessWidget {
         )
         );
   }
+  Widget envelopeBuilder(Color userColor, String userLabel) {
+    return Container(
+        color: userColor,
+        margin: EdgeInsets.only(bottom:30,top:40, left:10, right:10),
+        child: Stack(
+        alignment: Alignment.center,
+        children: [ Image.asset('assets/envelope.png'),
+        Positioned(top:25, child: Text(userLabel, style: TextStyle(fontSize: 15)))
+        ]
+        ),
+    );
+  } 
 }
