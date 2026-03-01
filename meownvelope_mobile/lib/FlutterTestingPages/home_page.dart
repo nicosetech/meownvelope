@@ -20,9 +20,9 @@ class MeownvelopeApp extends StatelessWidget {
             // bar to display title and paw icon
             appBar: AppBar(
                 backgroundColor: backgroundBlue,
-                title: const Text("Meownvelope", style: TextStyle(height: 5, fontSize: 40)),
-                leadingWidth: 80,
-                leading: Icon(Icons.pets, size: 50),
+                title: Text("Meownvelope", style: GoogleFonts.mochiyPopPOne(textStyle: TextStyle(fontSize: 35))),
+                leadingWidth: 90,
+                leading: Image.asset('assets/cat_paw.png', color: darkerBlue),
                 foregroundColor: darkerBlue,
                 elevation: 0,
           ),
@@ -39,15 +39,17 @@ class MeownvelopeApp extends StatelessWidget {
           
           //page layout
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               //top section to include menu button, cash visual, and buttons
               Column(
                 children:[
+                  SizedBox(width: 30, height:30), // for space between sections
                   // menu button
                   Row(
                     children: [
                         Ink(
+                        height: 70,
+                        width: 70,
                         decoration: BoxDecoration(
                             color:medBlue, 
                             borderRadius: BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8))),
@@ -86,7 +88,7 @@ class MeownvelopeApp extends StatelessWidget {
                                     borderRadius: BorderRadius.all(Radius.circular(8)),
                                     )
                                 ),
-                            child: Text("Import Funds", style: TextStyle(height: 2, fontSize: 18)),
+                            child: Text("Import Funds", style: GoogleFonts.martianMono(textStyle: TextStyle(height: 2, fontSize: 17))),
                             onPressed:(){ Text('pressed');} //temp until import funds page is made
                         ), 
                         TextButton(
@@ -101,7 +103,7 @@ class MeownvelopeApp extends StatelessWidget {
                                     borderRadius: const BorderRadius.all(Radius.circular(8)),
                                     )
                                 ),
-                            child: Text("Fill Envelopes", style: TextStyle(height: 2, fontSize: 18)),
+                            child: Text("Fill Envelopes", style: GoogleFonts.martianMono(textStyle: TextStyle(height: 2, fontSize: 15))),
                             onPressed:(){ Text('pressed');}, //temp until fill envelopes page is made
                         )
                     ]
@@ -109,12 +111,13 @@ class MeownvelopeApp extends StatelessWidget {
                 ]
               ), 
               // bottom section that shows envelope previews 
-             // SizedBox(width: 30, height:100), // for space between top and bottom sections
-              Container(
+              SizedBox(width: 30, height:50), // for space between top and bottom sections
+              Container( //background box containing envelope list
                 height: 450,
-                width: 350,
+                width: 380,
                 color: lightestBlue,
-                child: GridView.count(
+
+                child: GridView.count( // container that actually holds envelopes
                   crossAxisCount: 2,
                   children: [
                     envelopeBuilder(Colors.white, "Groceries")
