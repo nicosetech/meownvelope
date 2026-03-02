@@ -4,6 +4,7 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meownvelope_mobile/utils/hive/hive_database.dart';
+import 'package:meownvelope_mobile/meownvelope_colors.dart';
 
 class EnvelopeCreationPage extends StatefulWidget {
   const EnvelopeCreationPage({super.key});
@@ -32,12 +33,8 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
 
   Color _selectedColor = const Color(0xFFFFFFFF); // default white
   bool _placeAtStart = true; // true is front of list, false is end of list
-
-  // ── App colors ─────────────────────────────────────────────────
-  static const Color _bgColor      = Color(0xFFF0F6FA); // page background
-  static const Color _blueText     = Color(0xFF5B87B0); // main blue text
-  static const Color _btnColor     = Color(0xFF7AAAC8); // button blue
-
+ 
+  
   // ── Fonts ─────────────────────────────────────────────────────
 
   // Shared test style using Martian Mono font
@@ -116,7 +113,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _bgColor,
+      backgroundColor: MeownvelopeColors.bgColor,
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -136,7 +133,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   SizedBox(
                     width: w * 0.11,
                     height: w * 0.11,
-                    child: Image.asset('assets/cat_paw.png',width: w * 0.11,height: h * 0.11,color:_blueText,),
+                    child: Image.asset('assets/cat_paw.png',width: w * 0.11,height: h * 0.11,color:MeownvelopeColors.darkBlue,),
                   ),
                   SizedBox(width: w * 0.02),
                   Column(
@@ -144,14 +141,14 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                     children: [
                       Text('Meownvelope',
                         style: GoogleFonts.mochiyPopPOne(
-                          textStyle: TextStyle(fontSize: w * 0.06, color: _blueText),
+                          textStyle: TextStyle(fontSize: w * 0.06, color: MeownvelopeColors.darkBlue),
                           ),
                         ),
                       Padding(
                         padding: EdgeInsets.only(left: w * 0.3),
                         child: Text("Creation",
                           style: GoogleFonts.mochiyPopPOne(
-                            textStyle: TextStyle(fontSize: w * 0.06, color: _blueText),
+                            textStyle: TextStyle(fontSize: w * 0.06, color:MeownvelopeColors.darkBlue),
                           ),
                         ),
                       ),
@@ -180,13 +177,13 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                         ],
                         controller: _nameController,
                         textAlign: TextAlign.center,
-                        style: _monoStyle(w * 0.065, _blueText),
+                        style: _monoStyle(w * 0.065, MeownvelopeColors.darkBlue),
                         decoration: InputDecoration(
                           hintText: 'New Envelope',
-                          hintStyle: _monoStyle(w * 0.05, _blueText.withOpacity(0.5), letterSpacing: 1.2),
-                          border: UnderlineInputBorder(borderSide: BorderSide(color: _blueText)),
-                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: _blueText, width: 2)),
-                          enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: _blueText.withOpacity(0.5))),
+                          hintStyle: _monoStyle(w * 0.05, MeownvelopeColors.darkBlue.withOpacity(0.5), letterSpacing: 1.2),
+                          border: UnderlineInputBorder(borderSide: BorderSide(color: MeownvelopeColors.darkBlue)),
+                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: MeownvelopeColors.darkBlue, width: 2)),
+                          enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: MeownvelopeColors.darkBlue.withOpacity(0.5))),
                         ),
                       ),
                     ),
@@ -196,7 +193,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                         'assets/pencil_symbol.png',
                         width: w * 0.12,
                         height: h * 0.12,
-                        color: _blueText,)
+                        color: MeownvelopeColors.darkBlue,)
                     ),
                   ],
                 ),
@@ -229,7 +226,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                             child:
                             Text(
                               _nameController.text.isEmpty ? 'New Envelope' : _nameController.text,
-                              style: _monoStyle(w * 0.037,_blueText.withOpacity(0.8),
+                              style: _monoStyle(w * 0.037,MeownvelopeColors.darkBlue.withOpacity(0.8),
                             ),
                           ),
                           ),
@@ -259,8 +256,8 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                               color: color,
                               borderRadius: BorderRadius.circular(1),
                               border: isSelected
-                                  ? Border.all(color: _blueText, width: 2.5)
-                                  : Border.all(color: _blueText.withOpacity(1), width: 2),
+                                  ? Border.all(color: MeownvelopeColors.darkBlue, width: 2.5)
+                                  : Border.all(color: MeownvelopeColors.darkBlue.withOpacity(1), width: 2),
                             ),
                           ),
                         );
@@ -276,7 +273,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                 label: 'Place my envelope at the start of my list.',
                 value: true,
                 groupValue: _placeAtStart,
-                activeColor: _blueText,
+                activeColor: MeownvelopeColors.darkBlue,
                 onChanged: (val) => setState(() => _placeAtStart = val!),
               ),
               SizedBox(height: h * 0.03),
@@ -284,7 +281,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                 label: 'Place my envelope at the end of my list.',
                 value: false,
                 groupValue: _placeAtStart,
-                activeColor: _blueText,
+                activeColor: MeownvelopeColors.darkBlue,
                 onChanged: (val) => setState(() => _placeAtStart = val!),
               ),
               SizedBox(height: h * 0.05),
@@ -294,10 +291,10 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Envelope goal:',
-                    style: _monoStyle(w * 0.055, _blueText,),
+                    style: _monoStyle(w * 0.055, MeownvelopeColors.darkBlue,),
                   ),
                   Text("\$",
-                    style: _monoStyle( w * 0.055, _blueText),
+                    style: _monoStyle( w * 0.055, MeownvelopeColors.darkBlue),
                   ),
                   SizedBox(width: w * 0.015),
                   SizedBox(
@@ -309,16 +306,16 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                       ],
                       controller: _goalController,
                       keyboardType: TextInputType.number,
-                      style: _monoStyle(w * 0.04, _blueText,),
+                      style: _monoStyle(w * 0.04, MeownvelopeColors.darkBlue,),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
-                          borderSide: BorderSide(color: _blueText.withOpacity(0.5)),
+                          borderSide: BorderSide(color: MeownvelopeColors.darkBlue.withOpacity(0.5)),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
-                          borderSide: BorderSide(color: _blueText, width: 2),
+                          borderSide: BorderSide(color: MeownvelopeColors.darkBlue, width: 2),
                         ),
                       ),
                     ),
@@ -334,7 +331,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                     child: ElevatedButton(
                       onPressed: _createEnvelope,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: _btnColor,
+                        backgroundColor: MeownvelopeColors.medBlue,
                         foregroundColor: Colors.white,
                         padding: EdgeInsets.symmetric(vertical: h * 0.018),
                         elevation: 0,
@@ -348,7 +345,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                     child: ElevatedButton(
                       onPressed: () => Navigator.pop(context),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: _btnColor,
+                        backgroundColor: MeownvelopeColors.medBlue,
                         foregroundColor: Colors.white,
                         padding: EdgeInsets.symmetric(vertical: h * 0.018),
                         elevation: 0,
