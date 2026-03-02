@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meownvelope_mobile/DataTypes/envelope_data.dart';
 import 'package:meownvelope_mobile/envelope_creation_page.dart';
 import 'package:meownvelope_mobile/utils/hive/hive_database.dart';
 
@@ -141,9 +142,11 @@ class MeownvelopeApp extends StatelessWidget {
   } 
 
   List<Widget> envelopeList(){
-    List<Widget> envList = <Widget>[];
-    for (var data in HiveDatabase.getEnvelopes().values) {
-      envList.add(envelopeBuilder(Color(data.color), data.name));
+    List<EnvelopeData> sortedEnvelopes = HiveDatabase.getEnvelopes().values.toList();
+    sortedEnvelopes.sort((a, b) => a.displayOrder.compareTo(b.displayOrder));
+    List<Widget> envList = [];
+    for (var envelope in sortedEnvelopes){
+      envList.add(envelopeBuilder(Color(envelope.color), envelope.name));
     }
    //envList.sort();
     return envList;
