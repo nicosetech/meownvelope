@@ -119,9 +119,8 @@ class MeownvelopeApp extends StatelessWidget {
 
                 child: GridView.count( // container that actually holds envelopes
                   crossAxisCount: 2,
-                  children: [
-                    envelopeBuilder(Colors.white, "Groceries")
-                  ],
+                  children: envelopeList()
+                    //envelopeBuilder(Colors.white, "Groceries")
                 ),
               )
             ]
@@ -140,4 +139,13 @@ class MeownvelopeApp extends StatelessWidget {
         ),
     );
   } 
+
+  List<Widget> envelopeList(){
+    List<Widget> envList = <Widget>[];
+    for (var data in HiveDatabase.getEnvelopes().values) {
+      envList.add(envelopeBuilder(Color(data.color), data.name));
+    }
+   //envList.sort();
+    return envList;
+  }
 }
