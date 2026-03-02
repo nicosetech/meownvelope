@@ -136,7 +136,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   SizedBox(
                     width: w * 0.11,
                     height: w * 0.11,
-                    child: Image.asset('assets/Cat_Paw.png',width: w * 0.11,height: h * 0.11,color:_blueText,),
+                    child: Image.asset('assets/cat_paw.png',width: w * 0.11,height: h * 0.11,color:_blueText,),
                   ),
                   SizedBox(width: w * 0.02),
                   Column(
@@ -193,7 +193,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                     Positioned(
                       right: w * -0.02,
                       child: Image.asset(
-                        'assets/Pencil_Symbol.png',
+                        'assets/pencil_symbol.png',
                         width: w * 0.12,
                         height: h * 0.12,
                         color: _blueText,)
@@ -219,7 +219,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                         alignment: Alignment.center,
                         children: [
                           Image.asset(
-                            'assets/Envelope.png',
+                            'assets/envelope.png',
                             fit: BoxFit.fill,
                             width: double.infinity,
                             height: h * 0.20,

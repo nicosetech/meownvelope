@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meownvelope_mobile/envelope_creation_page.dart';
 import 'package:meownvelope_mobile/utils/hive/hive_database.dart';
 
 class MeownvelopeApp extends StatelessWidget {
@@ -14,8 +15,7 @@ class MeownvelopeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return Scaffold(
             backgroundColor: backgroundBlue,
             // bar to display title and paw icon
             appBar: AppBar(
@@ -34,7 +34,9 @@ class MeownvelopeApp extends StatelessWidget {
                 ),
                 icon: Icon(Icons.add, color: darkerBlue, size: 40),
                 label:Icon(Icons.mail_outline, color: darkerBlue, size: 40),
-                onPressed: (){Text('pressed');}, //temporary until button is linked to envelope creation page
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const EnvelopeCreationPage(),));
+                },
           ),  
           
           //page layout
@@ -124,7 +126,6 @@ class MeownvelopeApp extends StatelessWidget {
               )
             ]
           )
-        )
         );
   }
   Widget envelopeBuilder(Color userColor, String userLabel) {
