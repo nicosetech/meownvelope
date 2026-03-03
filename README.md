@@ -131,3 +131,21 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 - `Jira Task | SCRUM-161 | "Fix Documentation"`
   - Jira Task: [SCRUM-161](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-161?atlOrigin=eyJpIjoiZmU4NTk0NjMyODM2NGY4YjkzNjY1YTgyYmUxOGEzN2UiLCJwIjoiaiJ9)
   - BitBucket Branch: [SCRUM-161-fix-documentation](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-161-fix-documentation)
+
+
+  **Emma**: Collaborated with Nico on the UI design for the web app, tested functionality of the website, performed unit tests on hive database and envelope creation.
+
+- `Jira Task | SCRUM-122 | "Basic UI design for the mobile app"`
+  - Jira Task: [SCRUM-122](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-122)
+  - BitBucket Branch: [design/SCRUM-122-app-design](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/design/SCRUM-122-app-design)
+  - Pull Request: [PR #12](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/12)
+
+- `Jira Task | SCRUM-92 | "Unit Testing: Envelope Validation and HiveDatabase"`
+  - Jira Task: [SCRUM-92](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-92)
+  - BitBucket Branch: [SCRUM-92-unit-tests](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-92-unit-tests)
+  - Pull Request: [PR #31](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/31)
+
+- `Jira Task | SCRUM-89 | "Unit Testing: Flask Route and Contact Endpoint Tests"`
+  - Jira Task: [SCRUM-89](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-89)
+  - BitBucket Branch: [SCRUM-89-unit-tests](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-89-unit-tests)
+  - Pull Request: [PR #32](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/32)
