@@ -69,6 +69,8 @@ meownvelope_mobile/.pub-cache/
 meownvelope_mobile/.pub/
 meownvelope_mobile/build/
 meownvelope_mobile/coverage/
+meownvelope_mobile/macos/
+meownvelope_mobile/ios/
 
 # Symbolication related
 app.*.symbols
