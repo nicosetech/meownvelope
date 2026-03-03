@@ -131,3 +131,11 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 - `Jira Task | SCRUM-161 | "Fix Documentation"`
   - Jira Task: [SCRUM-161](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-161?atlOrigin=eyJpIjoiZmU4NTk0NjMyODM2NGY4YjkzNjY1YTgyYmUxOGEzN2UiLCJwIjoiaiJ9)
   - BitBucket Branch: [SCRUM-161-fix-documentation](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-161-fix-documentation)
+
+**Steven Kertes **: Designed the website page in Figma. Implemented the HTML and CSS of the website page. Implemented the Envelope Creation Page.
+- `Jira Task | SCRUM-76 | "Design: Website UI/UX Mockup"`
+  - Jira Task: [SCRUM-76](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-76)
+  - BitBucket Branch: [SCRUM-76](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-96-design-hive-data-model)
+  - `Jira Subtask | SCRUM-102 | "Define Hive Schema and Business Rules"`
+    - Jira Subtask: [SCRUM-102](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-102?atlOrigin=eyJpIjoiMjkxMGE1MTk2MmViNDhlNjk2ZWVmZGI3NTQ4ODc1NDIiLCJwIjoiaiJ9)
+    - BitBucket Branch: [SCRUM-102-define-hive-schema](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-102-define-hive-schema)
