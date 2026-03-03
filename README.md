@@ -102,3 +102,32 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 * As a user that struggles to navigate finance, I want a chat bot AI Assistant so I can receive guidance navigating the Meownvelope application and have my basic financial questions answered.
 * As a user that has difficulty making financial plans, I want a built in AI Assistant that can analyze my past user data so that I can receive personalized recommendations to help plan for the future.
 
+# Sprint 1 Review #
+**Treston**: Created the backend server environment to host the teams webpage. Designed and implemented the apps local storage database.
+- `Jira Task | SCRUM-82 | "Implement - Server Setup, SSH, Docker, Portainer, Flask"`
+  - Jira Task: [SCRUM-28](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-82?atlOrigin=eyJpIjoiNGZmODdiYzA1NmQxNGQ4MGExNmFiZDZiZjkwN2E2OTEiLCJwIjoiaiJ9)
+  - BitBucket Branch: [SCRUM-82-server-setup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-82-server-setup)
+- `Jira Task | SCRUM-96 | "Design - Hive Data Model"`
+  - Jira Task: [SCRUM-96](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-96?atlOrigin=eyJpIjoiNjljZDc1Nzk3MWI0NDBlNWI1MjQyNzBiY2ExNTU4M2EiLCJwIjoiaiJ9)
+  - BitBucket Branch: [SCRUM-96-design-hive-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-96-design-hive-data-model)
+  - `Jira Subtask | SCRUM-102 | "Define Hive Schema and Business Rules"`
+    - Jira Subtask: [SCRUM-102](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-102?atlOrigin=eyJpIjoiMjkxMGE1MTk2MmViNDhlNjk2ZWVmZGI3NTQ4ODc1NDIiLCJwIjoiaiJ9)
+    - BitBucket Branch: [SCRUM-102-define-hive-schema](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-102-define-hive-schema)
+- `Jira Task | SCRUM-104 | "Implementation: Hive Setup and Repository"`
+  - Jira Task: [SCRUM-104](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-104?atlOrigin=eyJpIjoiZTM2Njk3ZTIxZmU1NGIxNGFmNjg4M2VhOTc5NDE5MDUiLCJwIjoiaiJ9)
+  - BitBucket Branch: [feature/SCRUM-104-hive-flutter-initialization](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-104-hive-flutter-initialization)
+  - `Jira Subtask | SCRUM-103 | "Initialize Flutter Repo"`
+    - Jira Subtask: [SCRUM-103](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-103?atlOrigin=eyJpIjoiMjE1NWY4NTU0MDQxNDIyYTkzYzJhMmQ1YWJlOGJkMDYiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-103-initialize-flutter-repo](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-103-initialize-flutter-repo)
+  - `Jira Subtask | SCRUM-105 | "3A: Hive Setup and Core Repository Methods"`
+    - Jira Subtask: [SCRUM-105](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-105?atlOrigin=eyJpIjoiYjZmNmZmMTJhODQ2NGE3NmE0MDcwZDNhZTU3YTczOWEiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-105-3a-hive-setup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-105-3a-hive-setup)
+- `Jira Task | SCRUM-170 | "Fix: Remake Hive Data Structure to Classes instead of Maps"`
+  - Jira Task: [SCRUM-170](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-170?atlOrigin=eyJpIjoiYTliZjJjYzIyZWYxNGE2NmFiYjQ2ZDRmNGNlMDY4OTciLCJwIjoiaiJ9)
+  - BitBucket Branch: [hotfix/SCRUM-170-remake-hive-data-structure](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/hotfix/SCRUM-170-remake-hive-data-structure)
+- `Jira Task | SCRUM-169 | "Implementation: HiveDatabase Automatic Index Finder"`
+  - Jira Task: [SCRUM-169](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-169?atlOrigin=eyJpIjoiMTcxNmI2OTg3ODM1NGNkYzhlOTE3MGFiM2VjZThjY2EiLCJwIjoiaiJ9)
+  - BitBucket Branch: [feature/SCRUM-169-display-order-finder](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-169-display-order-finder)
+- `Jira Task | SCRUM-161 | "Fix Documentation"`
+  - Jira Task: [SCRUM-161](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-161?atlOrigin=eyJpIjoiZmU4NTk0NjMyODM2NGY4YjkzNjY1YTgyYmUxOGEzN2UiLCJwIjoiaiJ9)
+  - BitBucket Branch: [SCRUM-161-fix-documentation](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-161-fix-documentation)
