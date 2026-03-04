@@ -168,7 +168,7 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
     - `Jira Subtask | SCRUM-87 | "5A: Build the 4-Page Jinja2 Templates | Included in SCRUM-86"`
         - Jira Subtask: [SCRUM-87](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-87?atlOrigin=eyJpIjoiNWU0YWRhZWZjZjBlNDc3MGJhMmM4ZWFjMDg5MmNkOGYiLCJwIjoiaiJ9)
         - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
-    - `Jira Subtask | SCRUM-88 | "5B: Build the Contact Form and Wire to Flask" | Included in SCRUM-86`
+    - `Jira Subtask | SCRUM-88 | "5B: Build the Contact Form and Wire to Flask" | Included in SCRUM-86"`
         - Jira Subtask: [SCRUM-88](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-88?atlOrigin=eyJpIjoiYjJlZWI3MWU5ZDAyNDllZDlhZTdkMjk2NGFjNzNkMWUiLCJwIjoiaiJ9)
         - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
 - `Jira Task | SCRUM-172 | "Fix typos in webapp html & CSS"`
@@ -233,19 +233,19 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 
 **Features**
 
-    - Design and implement the transferring money page
-    - Design and implement the transfer functionality
-    - Design and implement the log history page
-    - Design and implement the navigation bar
-    - Design the streaks and badges definitions
-    - Design and implement the streaks and badges page
-    - Design and implement the unlock pop up
-    - Design and implement the Hive setup badge and streak storage
-    - Design and implement the import funds page
-    - Design and implement the fill envelopes page
-    - Design and implement the on tap envelopes pop up
+ * Design and implement the transferring money page
+* Design and implement the transfer functionality
+* Design and implement the log history page
+* Design and implement the navigation bar
+* Design the streaks and badges definitions
+* Design and implement the streaks and badges page
+* Design and implement the unlock pop up
+* Design and implement the Hive setup badge and streak storage
+* Design and implement the import funds page
+* Design and implement the fill envelopes page
+* Design and implement the on tap envelopes pop up
 
 **Bugs**
 
-    - Home page: App adjusting to keyboard and the container sizes overlapping
+* Home page: App adjusting to keyboard and the container sizes overlapping
 
