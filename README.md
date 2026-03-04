@@ -104,6 +104,7 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 
 # Sprint 1 Review #
 **Treston**: Created the backend server environment to host the teams webpage. Designed and implemented the apps local storage database.
+
 - `Jira Task | SCRUM-82 | "Implement - Server Setup, SSH, Docker, Portainer, Flask"`
   - Jira Task: [SCRUM-28](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-82?atlOrigin=eyJpIjoiNGZmODdiYzA1NmQxNGQ4MGExNmFiZDZiZjkwN2E2OTEiLCJwIjoiaiJ9)
   - BitBucket Branch: [SCRUM-82-server-setup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-82-server-setup)
@@ -151,6 +152,7 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   - Pull Request: [PR #32](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/32)
 
 **Steven Kertes**: Designed the website page in Figma. Implemented the HTML and CSS of the website page. Implemented the Envelope Creation Page.
+
 - `Jira Task | SCRUM-76 | "Design: Website UI/UX Mockup"`
   - Jira Task: [SCRUM-76](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-76?atlOrigin=eyJpIjoiZTY5OGNjYWEyMWNhNDVmNjg2NWNkNmI4Njg3MTdhYzMiLCJwIjoiaiJ9)
   - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
@@ -180,6 +182,7 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   - BitBucket Branch: [feature/SCRUM-168-implementation-envelope-creati](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-168-implementation-envelope-creati)
 
 **Jake Olsen**: Collaborated with Steven on Figma design for the Web Application. Created a flask file to connect and use the existing HTML and CSS. Implemented support page & rules on submissions. Linked to gmail API key.
+
 - `Jira Task | SCRUM-83 | "Implementation: Flask Routes, Contact Endpoint & Email Delivery"`
   - Jira Task: [SCRUM-83](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-83?atlOrigin=eyJpIjoiMGMxYjlhYTM5MDlhNGExYTk3YWU3ODk4YzJhYWFhODEiLCJwIjoiaiJ9)
   - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
