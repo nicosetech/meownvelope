@@ -181,6 +181,8 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 
 # Sprint 2 Next Steps #
 
+![Alt text](./images/burnup_chart_sprint1.png)
+
 **Features**
   - Design and implement the transferring money page
   - Design and implement the transfer functionality
