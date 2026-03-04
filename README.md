@@ -133,7 +133,7 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   - BitBucket Branch: [SCRUM-161-fix-documentation](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-161-fix-documentation)
 
 
-  **Emma**: Collaborated with Nico on the UI design for the web app, tested functionality of the website, performed unit tests on hive database and envelope creation.
+  **Emma**: Collaborated with Nico on the UI design for the mobile app, tested functionality of the website, performed unit tests on hive database and envelope creation.
 
 - `Jira Task | SCRUM-122 | "Basic UI design for the mobile app"`
   - Jira Task: [SCRUM-122](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-122)
@@ -217,3 +217,36 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 **Bugs**
   - Home page: App adjusting to keyboard and the container sizes overlapping
 
+
+
+**Nico**: Collaborated with Emma on app UI. Specifically, designed and created wireframes for the homepage, envelope creation page, profile page and menu bar. Implemented homepage with functional new envelope buttron and up to date envelope previews. 
+
+- `Jira Task | SCRUM-93 | "Design - Envelope Creation & Management UI/UX Mockup"`
+  - Jira Task: [SCRUM-93] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-93)
+  - BitBucket Branch: [SCRUM-93-design-envelope-creation-ui](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-93-design-envelope-creation-ui)
+
+  -`Jira Subtask | SCRUM-97 | "1A - Sketch Figma Wireframes"`
+    - Jira Subtask: [SCRUM-97] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-97)
+    - BitBucket Branch: [SCRUM-97-1a-sketch-figma-wireframes](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-97-1a-sketch-figma-wireframes)
+
+  -`Jira Subtask | SCRUM-158 | "Research Flutter"`
+    -Jira Subtask: [SCRUM-158] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-158)
+    - BitBucket Branch: [SCRUM-158-research-flutter](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-158-research-flutter)
+
+  -`Jira Subtask | SCRUM-101 | "1B - High-Fidelity Flutter Mockup"`
+    -Jira Subtask: [SCRUM-101] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-101)
+    - BitBucket Branch: [SCRUM-101-build-figma-wireframes](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-101-build-figma-wireframes)
+
+-`Jira Task | SCRUM-98 | "Implementation: Home Preview Screen"`
+- Jira Task: [SCRUM-98] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-98)
+ - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
+ 
+  -Subtasks (SCRUM-157 and SCRUM-99) were commited on the above branch and did not have their own branches
+
+  -`Jira Subtask | SCRUM-157 | "5A - Home Page Creation"`
+  - Jira Subtask: [SCRUM-157] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-157)
+  - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
+
+  -`Jira Subtask | SCRUM-99 | "5B - Envelope Creation Button"`
+  -Jira Subtask: [SCRUM-99] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-99)
+  - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
