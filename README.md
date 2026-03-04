@@ -134,7 +134,7 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
     - BitBucket Branch: [SCRUM-161-fix-documentation](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-161-fix-documentation)
 
 
-  **Emma**: Collaborated with Nico on the UI design for the mobile app, tested functionality of the website, performed unit tests on hive database and envelope creation.
+**Emma**: Collaborated with Nico on the UI design for the mobile app, tested functionality of the website, performed unit tests on hive database and envelope creation.
 
 - `Jira Task | SCRUM-122 | "Basic UI design for the mobile app"`
     - Jira Task: [SCRUM-122](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-122)
