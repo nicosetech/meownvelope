@@ -179,4 +179,23 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   - Jira Task: [SCRUM-168](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-168?atlOrigin=eyJpIjoiYjVhYWU3ZTc3MjdkNDgwNmFmN2RkM2UzNTJiMzgyZjMiLCJwIjoiaiJ9)
   - BitBucket Branch: [feature/SCRUM-168-implementation-envelope-creati](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-168-implementation-envelope-creati)
 
+**Jake Olsen**: Collaborated with Steven on Figma design for the Web Application. Created a flask file to connect and use the existing HTML and CSS. Implemented support page & rules on submissions. Linked to gmail API key.
+- `Jira Task | SCRUM-83 | "Implementation: Flask Routes, Contact Endpoint & Email Delivery"`
+  - Jira Task: [SCRUM-83](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-83?atlOrigin=eyJpIjoiMGMxYjlhYTM5MDlhNGExYTk3YWU3ODk4YzJhYWFhODEiLCJwIjoiaiJ9)
+  - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
+  - `Jira Subtask | SCRUM-84 | "4A: Building the pages and contact form backend" | Included in SCRUM-83`
+    - Jira Subtask: [SCRUM-84](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-84?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
+  - `Jira Subtask | SCRUM - 85 | "4B: Implement Email Delivery and Manual Testing" | Included in SCRUM-83`
+    - Jira Subtask: [SCRUM-85](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-85?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
+- `Jira Task | SCRUM-79 | "Design: Contact Form Data Model & API Contract"`
+  - Jira Task: [SCRUM-79](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-79?atlOrigin=eyJpIjoiMGMxYjlhYTM5MDlhNGExYTk3YWU3ODk4YzJhYWFhODEiLCJwIjoiaiJ9)
+  - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-79-design-contact-form-data-model)
+  - `Jira Subtask | SCRUM-80 | "2A: Define Form Validation Rules and Email Strategy" | Included in SCRUM-79`
+    - Jira Subtask: [SCRUM-80](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-80?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
+  - `Jira Subtask | SCRUM - 81 | "2B: Define API Contract and Flask Route Strategy" | Included in SCRUM-79`
+    - Jira Subtask: [SCRUM-81](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-15?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
 
