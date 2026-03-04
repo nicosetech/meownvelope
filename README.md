@@ -198,26 +198,6 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   - `Jira Subtask | SCRUM - 81 | "2B: Define API Contract and Flask Route Strategy" | Included in SCRUM-79`
     - Jira Subtask: [SCRUM-81](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-15?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
     - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
-# Sprint 2 Next Steps #
-
-![Alt text](./images/burnup_chart_sprint1.png)
-
-**Features**
-  - Design and implement the transferring money page
-  - Design and implement the transfer functionality
-  - Design and implement the log history page
-  - Design and implement the navigation bar
-  - Design the streaks and badges definitions
-  - Design and implement the streaks and badges page
-  - Design and implement the unlock pop up
-  - Design and implement the Hive setup badge and streak storage
-  - Design and implement the import funds page
-  - Design and implement the fill envelopes page
-  - Design and implement the on tap envelopes pop up
-**Bugs**
-  - Home page: App adjusting to keyboard and the container sizes overlapping
-
-
 
 **Nico**: Collaborated with Emma on app UI. Specifically, designed and created wireframes for the homepage, envelope creation page, profile page and menu bar. Implemented homepage with functional new envelope buttron and up to date envelope previews. 
 
@@ -250,3 +230,22 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   -`Jira Subtask | SCRUM-99 | "5B - Envelope Creation Button"`
   -Jira Subtask: [SCRUM-99] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-99)
   - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
+# Sprint 2 Next Steps #
+
+![Alt text](./images/burnup_chart_sprint1.png)
+
+**Features**
+  - Design and implement the transferring money page
+  - Design and implement the transfer functionality
+  - Design and implement the log history page
+  - Design and implement the navigation bar
+  - Design the streaks and badges definitions
+  - Design and implement the streaks and badges page
+  - Design and implement the unlock pop up
+  - Design and implement the Hive setup badge and streak storage
+  - Design and implement the import funds page
+  - Design and implement the fill envelopes page
+  - Design and implement the on tap envelopes pop up
+**Bugs**
+  - Home page: App adjusting to keyboard and the container sizes overlapping
+
