@@ -238,6 +238,7 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 ![Alt text](./images/burnup_chart_sprint1.png)
 
 **Features**
+
   - Design and implement the transferring money page
   - Design and implement the transfer functionality
   - Design and implement the log history page
@@ -250,5 +251,6 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   - Design and implement the fill envelopes page
   - Design and implement the on tap envelopes pop up
 **Bugs**
+
   - Home page: App adjusting to keyboard and the container sizes overlapping
 
