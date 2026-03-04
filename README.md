@@ -106,151 +106,146 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 **Treston**: Created the backend server environment to host the teams webpage. Designed and implemented the apps local storage database.
 
 - `Jira Task | SCRUM-82 | "Implement - Server Setup, SSH, Docker, Portainer, Flask"`
-  - Jira Task: [SCRUM-28](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-82?atlOrigin=eyJpIjoiNGZmODdiYzA1NmQxNGQ4MGExNmFiZDZiZjkwN2E2OTEiLCJwIjoiaiJ9)
-  - BitBucket Branch: [SCRUM-82-server-setup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-82-server-setup)
+    - Jira Task: [SCRUM-28](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-82?atlOrigin=eyJpIjoiNGZmODdiYzA1NmQxNGQ4MGExNmFiZDZiZjkwN2E2OTEiLCJwIjoiaiJ9)
+    - BitBucket Branch: [SCRUM-82-server-setup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-82-server-setup)
 - `Jira Task | SCRUM-96 | "Design - Hive Data Model"`
-  - Jira Task: [SCRUM-96](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-96?atlOrigin=eyJpIjoiNjljZDc1Nzk3MWI0NDBlNWI1MjQyNzBiY2ExNTU4M2EiLCJwIjoiaiJ9)
-  - BitBucket Branch: [SCRUM-96-design-hive-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-96-design-hive-data-model)
-  - `Jira Subtask | SCRUM-102 | "Define Hive Schema and Business Rules"`
-    - Jira Subtask: [SCRUM-102](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-102?atlOrigin=eyJpIjoiMjkxMGE1MTk2MmViNDhlNjk2ZWVmZGI3NTQ4ODc1NDIiLCJwIjoiaiJ9)
-    - BitBucket Branch: [SCRUM-102-define-hive-schema](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-102-define-hive-schema)
+    - Jira Task: [SCRUM-96](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-96?atlOrigin=eyJpIjoiNjljZDc1Nzk3MWI0NDBlNWI1MjQyNzBiY2ExNTU4M2EiLCJwIjoiaiJ9)
+    - BitBucket Branch: [SCRUM-96-design-hive-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-96-design-hive-data-model)
+    - `Jira Subtask | SCRUM-102 | "Define Hive Schema and Business Rules"`
+        - Jira Subtask: [SCRUM-102](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-102?atlOrigin=eyJpIjoiMjkxMGE1MTk2MmViNDhlNjk2ZWVmZGI3NTQ4ODc1NDIiLCJwIjoiaiJ9)
+        - BitBucket Branch: [SCRUM-102-define-hive-schema](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-102-define-hive-schema)
 - `Jira Task | SCRUM-104 | "Implementation: Hive Setup and Repository"`
-  - Jira Task: [SCRUM-104](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-104?atlOrigin=eyJpIjoiZTM2Njk3ZTIxZmU1NGIxNGFmNjg4M2VhOTc5NDE5MDUiLCJwIjoiaiJ9)
-  - BitBucket Branch: [feature/SCRUM-104-hive-flutter-initialization](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-104-hive-flutter-initialization)
-  - `Jira Subtask | SCRUM-103 | "Initialize Flutter Repo"`
-    - Jira Subtask: [SCRUM-103](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-103?atlOrigin=eyJpIjoiMjE1NWY4NTU0MDQxNDIyYTkzYzJhMmQ1YWJlOGJkMDYiLCJwIjoiaiJ9)
-    - BitBucket Branch: [feature/SCRUM-103-initialize-flutter-repo](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-103-initialize-flutter-repo)
-  - `Jira Subtask | SCRUM-105 | "3A: Hive Setup and Core Repository Methods"`
-    - Jira Subtask: [SCRUM-105](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-105?atlOrigin=eyJpIjoiYjZmNmZmMTJhODQ2NGE3NmE0MDcwZDNhZTU3YTczOWEiLCJwIjoiaiJ9)
-    - BitBucket Branch: [feature/SCRUM-105-3a-hive-setup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-105-3a-hive-setup)
+    - Jira Task: [SCRUM-104](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-104?atlOrigin=eyJpIjoiZTM2Njk3ZTIxZmU1NGIxNGFmNjg4M2VhOTc5NDE5MDUiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-104-hive-flutter-initialization](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-104-hive-flutter-initialization)
+    - `Jira Subtask | SCRUM-103 | "Initialize Flutter Repo"`
+        - Jira Subtask: [SCRUM-103](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-103?atlOrigin=eyJpIjoiMjE1NWY4NTU0MDQxNDIyYTkzYzJhMmQ1YWJlOGJkMDYiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-103-initialize-flutter-repo](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-103-initialize-flutter-repo)
+    - `Jira Subtask | SCRUM-105 | "3A: Hive Setup and Core Repository Methods"`
+        - Jira Subtask: [SCRUM-105](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-105?atlOrigin=eyJpIjoiYjZmNmZmMTJhODQ2NGE3NmE0MDcwZDNhZTU3YTczOWEiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-105-3a-hive-setup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-105-3a-hive-setup)
 - `Jira Task | SCRUM-170 | "Fix: Remake Hive Data Structure to Classes instead of Maps"`
-  - Jira Task: [SCRUM-170](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-170?atlOrigin=eyJpIjoiYTliZjJjYzIyZWYxNGE2NmFiYjQ2ZDRmNGNlMDY4OTciLCJwIjoiaiJ9)
-  - BitBucket Branch: [hotfix/SCRUM-170-remake-hive-data-structure](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/hotfix/SCRUM-170-remake-hive-data-structure)
+    - Jira Task: [SCRUM-170](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-170?atlOrigin=eyJpIjoiYTliZjJjYzIyZWYxNGE2NmFiYjQ2ZDRmNGNlMDY4OTciLCJwIjoiaiJ9)
+    - BitBucket Branch: [hotfix/SCRUM-170-remake-hive-data-structure](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/hotfix/SCRUM-170-remake-hive-data-structure)
 - `Jira Task | SCRUM-169 | "Implementation: HiveDatabase Automatic Index Finder"`
-  - Jira Task: [SCRUM-169](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-169?atlOrigin=eyJpIjoiMTcxNmI2OTg3ODM1NGNkYzhlOTE3MGFiM2VjZThjY2EiLCJwIjoiaiJ9)
-  - BitBucket Branch: [feature/SCRUM-169-display-order-finder](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-169-display-order-finder)
+    - Jira Task: [SCRUM-169](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-169?atlOrigin=eyJpIjoiMTcxNmI2OTg3ODM1NGNkYzhlOTE3MGFiM2VjZThjY2EiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-169-display-order-finder](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-169-display-order-finder)
 - `Jira Task | SCRUM-161 | "Fix Documentation"`
-  - Jira Task: [SCRUM-161](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-161?atlOrigin=eyJpIjoiZmU4NTk0NjMyODM2NGY4YjkzNjY1YTgyYmUxOGEzN2UiLCJwIjoiaiJ9)
-  - BitBucket Branch: [SCRUM-161-fix-documentation](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-161-fix-documentation)
+    - Jira Task: [SCRUM-161](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-161?atlOrigin=eyJpIjoiZmU4NTk0NjMyODM2NGY4YjkzNjY1YTgyYmUxOGEzN2UiLCJwIjoiaiJ9)
+    - BitBucket Branch: [SCRUM-161-fix-documentation](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-161-fix-documentation)
 
 
   **Emma**: Collaborated with Nico on the UI design for the mobile app, tested functionality of the website, performed unit tests on hive database and envelope creation.
 
 - `Jira Task | SCRUM-122 | "Basic UI design for the mobile app"`
-  - Jira Task: [SCRUM-122](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-122)
-  - BitBucket Branch: [design/SCRUM-122-app-design](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/design/SCRUM-122-app-design)
-  - Pull Request: [PR #12](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/12)
+    - Jira Task: [SCRUM-122](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-122)
+    - BitBucket Branch: [design/SCRUM-122-app-design](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/design/SCRUM-122-app-design)
+    - Pull Request: [PR #12](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/12)
 
 - `Jira Task | SCRUM-92 | "Unit Testing: Envelope Validation and HiveDatabase"`
-  - Jira Task: [SCRUM-92](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-92)
-  - BitBucket Branch: [SCRUM-92-unit-tests](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-92-unit-tests)
-  - Pull Request: [PR #31](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/31)
+    - Jira Task: [SCRUM-92](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-92)
+    - BitBucket Branch: [SCRUM-92-unit-tests](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-92-unit-tests)
+    - Pull Request: [PR #31](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/31)
 
 - `Jira Task | SCRUM-89 | "Unit Testing: Flask Route and Contact Endpoint Tests"`
-  - Jira Task: [SCRUM-89](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-89)
-  - BitBucket Branch: [SCRUM-89-unit-tests](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-89-unit-tests)
-  - Pull Request: [PR #32](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/32)
+    - Jira Task: [SCRUM-89](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-89)
+    - BitBucket Branch: [SCRUM-89-unit-tests](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-89-unit-tests)
+    - Pull Request: [PR #32](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/32)
 
 **Steven Kertes**: Designed the website page in Figma. Implemented the HTML and CSS of the website page. Implemented the Envelope Creation Page.
 
 - `Jira Task | SCRUM-76 | "Design: Website UI/UX Mockup"`
-  - Jira Task: [SCRUM-76](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-76?atlOrigin=eyJpIjoiZTY5OGNjYWEyMWNhNDVmNjg2NWNkNmI4Njg3MTdhYzMiLCJwIjoiaiJ9)
-  - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
-  - `Jira Subtask | SCRUM-77 | "1A: Sketch Low-Fidelity Wireframes | Included in SCRUM-76"`
-    - Jira Subtask: [SCRUM-77](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-77?atlOrigin=eyJpIjoiZGUzNzA1ZGY1ODE2NDkzYWFlOWM3YzBkODc4NWMwOWEiLCJwIjoiaiJ9)
+    - Jira Task: [SCRUM-76](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-76?atlOrigin=eyJpIjoiZTY5OGNjYWEyMWNhNDVmNjg2NWNkNmI4Njg3MTdhYzMiLCJwIjoiaiJ9)
     - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
-  - `Jira Subtask | SCRUM-78 | "1B: Build High-Fidelity Mockup" | Included in SCRUM-76`
-    - Jira Subtask: [SCRUM-78](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-78?atlOrigin=eyJpIjoiMGM0NTlmZDE2NGUyNGM2NTlmMDk1OGRlNWYzNmI3M2YiLCJwIjoiaiJ9)
-    - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
+    - `Jira Subtask | SCRUM-77 | "1A: Sketch Low-Fidelity Wireframes | Included in SCRUM-76"`
+        - Jira Subtask: [SCRUM-77](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-77?atlOrigin=eyJpIjoiZGUzNzA1ZGY1ODE2NDkzYWFlOWM3YzBkODc4NWMwOWEiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
+    - `Jira Subtask | SCRUM-78 | "1B: Build High-Fidelity Mockup" | Included in SCRUM-76`
+        - Jira Subtask: [SCRUM-78](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-78?atlOrigin=eyJpIjoiMGM0NTlmZDE2NGUyNGM2NTlmMDk1OGRlNWYzNmI3M2YiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
 - `Jira Task | SCRUM-86 | "Implementation: HTML/CSS Templates"`
-  - Jira Task: [SCRUM-86](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-86?atlOrigin=eyJpIjoiMmY2NWMyNGFkMWE3NDY3ZjlmZDdlMTkyODExZGQxYjIiLCJwIjoiaiJ9)
-  - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
-  - `Jira Subtask | SCRUM-87 | "5A: Build the 4-Page Jinja2 Templates | Included in SCRUM-86"`
-    - Jira Subtask: [SCRUM-87](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-87?atlOrigin=eyJpIjoiNWU0YWRhZWZjZjBlNDc3MGJhMmM4ZWFjMDg5MmNkOGYiLCJwIjoiaiJ9)
+    - Jira Task: [SCRUM-86](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-86?atlOrigin=eyJpIjoiMmY2NWMyNGFkMWE3NDY3ZjlmZDdlMTkyODExZGQxYjIiLCJwIjoiaiJ9)
     - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
-  - `Jira Subtask | SCRUM-88 | "5B: Build the Contact Form and Wire to Flask" | Included in SCRUM-86`
-    - Jira Subtask: [SCRUM-88](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-88?atlOrigin=eyJpIjoiYjJlZWI3MWU5ZDAyNDllZDlhZTdkMjk2NGFjNzNkMWUiLCJwIjoiaiJ9)
-    - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
+    - `Jira Subtask | SCRUM-87 | "5A: Build the 4-Page Jinja2 Templates | Included in SCRUM-86"`
+        - Jira Subtask: [SCRUM-87](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-87?atlOrigin=eyJpIjoiNWU0YWRhZWZjZjBlNDc3MGJhMmM4ZWFjMDg5MmNkOGYiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
+    - `Jira Subtask | SCRUM-88 | "5B: Build the Contact Form and Wire to Flask" | Included in SCRUM-86`
+        - Jira Subtask: [SCRUM-88](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-88?atlOrigin=eyJpIjoiYjJlZWI3MWU5ZDAyNDllZDlhZTdkMjk2NGFjNzNkMWUiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
 - `Jira Task | SCRUM-172 | "Fix typos in webapp html & CSS"`
-  - Jira Task: [SCRUM-172](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-172?atlOrigin=eyJpIjoiMjY2YWUwNzFlYzk2NGM2N2I4OTgyMjI5NDMyMGZiZGYiLCJwIjoiaiJ9)
-  - BitBucket Branch: [SCRUM-172-fix-typos-in-webapp-html](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-172-fix-typos-in-webapp-html)
+    - Jira Task: [SCRUM-172](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-172?atlOrigin=eyJpIjoiMjY2YWUwNzFlYzk2NGM2N2I4OTgyMjI5NDMyMGZiZGYiLCJwIjoiaiJ9)
+    - BitBucket Branch: [SCRUM-172-fix-typos-in-webapp-html](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-172-fix-typos-in-webapp-html)
 - `Jira Task | SCRUM-171 | "Fix Envelope_creation_page location & comments"`
-  - Jira Task: [SCRUM-171](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-171?atlOrigin=eyJpIjoiN2I1YWEyZmUzMDRiNDRiODkwNzA0NDE0MTRlMDk3ZDMiLCJwIjoiaiJ9)
-  - BitBucket Branch: [bugfix/SCRUM-171-fix-envelope_creation_page-loc](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/bugfix/SCRUM-171-fix-envelope_creation_page-loc)
+    - Jira Task: [SCRUM-171](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-171?atlOrigin=eyJpIjoiN2I1YWEyZmUzMDRiNDRiODkwNzA0NDE0MTRlMDk3ZDMiLCJwIjoiaiJ9)
+    - BitBucket Branch: [bugfix/SCRUM-171-fix-envelope_creation_page-loc](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/bugfix/SCRUM-171-fix-envelope_creation_page-loc)
 - `Jira Task | SCRUM-168 | "Implementation: Envelope creating page"`
-  - Jira Task: [SCRUM-168](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-168?atlOrigin=eyJpIjoiYjVhYWU3ZTc3MjdkNDgwNmFmN2RkM2UzNTJiMzgyZjMiLCJwIjoiaiJ9)
-  - BitBucket Branch: [feature/SCRUM-168-implementation-envelope-creati](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-168-implementation-envelope-creati)
+    - Jira Task: [SCRUM-168](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-168?atlOrigin=eyJpIjoiYjVhYWU3ZTc3MjdkNDgwNmFmN2RkM2UzNTJiMzgyZjMiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-168-implementation-envelope-creati](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-168-implementation-envelope-creati)
 
 **Jake Olsen**: Collaborated with Steven on Figma design for the Web Application. Created a flask file to connect and use the existing HTML and CSS. Implemented support page & rules on submissions. Linked to gmail API key.
 
 - `Jira Task | SCRUM-83 | "Implementation: Flask Routes, Contact Endpoint & Email Delivery"`
-  - Jira Task: [SCRUM-83](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-83?atlOrigin=eyJpIjoiMGMxYjlhYTM5MDlhNGExYTk3YWU3ODk4YzJhYWFhODEiLCJwIjoiaiJ9)
-  - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
-  - `Jira Subtask | SCRUM-84 | "4A: Building the pages and contact form backend" | Included in SCRUM-83`
-    - Jira Subtask: [SCRUM-84](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-84?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+    - Jira Task: [SCRUM-83](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-83?atlOrigin=eyJpIjoiMGMxYjlhYTM5MDlhNGExYTk3YWU3ODk4YzJhYWFhODEiLCJwIjoiaiJ9)
     - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
-  - `Jira Subtask | SCRUM - 85 | "4B: Implement Email Delivery and Manual Testing" | Included in SCRUM-83`
-    - Jira Subtask: [SCRUM-85](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-85?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
-    - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
+    - `Jira Subtask | SCRUM-84 | "4A: Building the pages and contact form backend" | Included in SCRUM-83`
+        - Jira Subtask: [SCRUM-84](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-84?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
+    - `Jira Subtask | SCRUM - 85 | "4B: Implement Email Delivery and Manual Testing" | Included in SCRUM-83`
+        - Jira Subtask: [SCRUM-85](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-85?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-83-implementation-flask-routes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
 - `Jira Task | SCRUM-79 | "Design: Contact Form Data Model & API Contract"`
-  - Jira Task: [SCRUM-79](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-79?atlOrigin=eyJpIjoiMGMxYjlhYTM5MDlhNGExYTk3YWU3ODk4YzJhYWFhODEiLCJwIjoiaiJ9)
-  - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-79-design-contact-form-data-model)
-  - `Jira Subtask | SCRUM-80 | "2A: Define Form Validation Rules and Email Strategy" | Included in SCRUM-79`
-    - Jira Subtask: [SCRUM-80](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-80?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
-    - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
-  - `Jira Subtask | SCRUM - 81 | "2B: Define API Contract and Flask Route Strategy" | Included in SCRUM-79`
-    - Jira Subtask: [SCRUM-81](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-15?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
-    - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
+    - Jira Task: [SCRUM-79](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-79?atlOrigin=eyJpIjoiMGMxYjlhYTM5MDlhNGExYTk3YWU3ODk4YzJhYWFhODEiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-79-design-contact-form-data-model)
+    - `Jira Subtask | SCRUM-80 | "2A: Define Form Validation Rules and Email Strategy" | Included in SCRUM-79`
+        - Jira Subtask: [SCRUM-80](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-80?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
+    - `Jira Subtask | SCRUM - 81 | "2B: Define API Contract and Flask Route Strategy" | Included in SCRUM-79`
+        - Jira Subtask: [SCRUM-81](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-15?atlOrigin=eyJpIjoiMTM5NDhhNDM1YTZlNDA1YjliODg2MGE5M2U2YzM3NTEiLCJwIjoiaiJ9)
+        - BitBucket Branch: [feature/SCRUM-79-design-contact-form-data-model](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-83-implementation-flask-routes)
 
 **Nico**: Collaborated with Emma on app UI. Specifically, designed and created wireframes for the homepage, envelope creation page, profile page and menu bar. Implemented homepage with functional new envelope buttron and up to date envelope previews. 
 
 - `Jira Task | SCRUM-93 | "Design - Envelope Creation & Management UI/UX Mockup"`
-  - Jira Task: [SCRUM-93] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-93)
-  - BitBucket Branch: [SCRUM-93-design-envelope-creation-ui](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-93-design-envelope-creation-ui)
-
-  -`Jira Subtask | SCRUM-97 | "1A - Sketch Figma Wireframes"`
-    - Jira Subtask: [SCRUM-97] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-97)
-    - BitBucket Branch: [SCRUM-97-1a-sketch-figma-wireframes](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-97-1a-sketch-figma-wireframes)
-
-  -`Jira Subtask | SCRUM-158 | "Research Flutter"`
-    -Jira Subtask: [SCRUM-158] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-158)
-    - BitBucket Branch: [SCRUM-158-research-flutter](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-158-research-flutter)
-
+    - Jira Task: [SCRUM-93] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-93)
+    - BitBucket Branch: [SCRUM-93-design-envelope-creation-ui](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-93-design-envelope-creation-ui)
+    - `Jira Subtask | SCRUM-97 | "1A - Sketch Figma Wireframes"`
+        - Jira Subtask: [SCRUM-97] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-97)
+        - BitBucket Branch: [SCRUM-97-1a-sketch-figma-wireframes](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-97-1a-sketch-figma-wireframes)
+    - `Jira Subtask | SCRUM-158 | "Research Flutter"`
+        - Jira Subtask: [SCRUM-158] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-158)
+        - BitBucket Branch: [SCRUM-158-research-flutter](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-158-research-flutter)
   -`Jira Subtask | SCRUM-101 | "1B - High-Fidelity Flutter Mockup"`
-    -Jira Subtask: [SCRUM-101] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-101)
-    - BitBucket Branch: [SCRUM-101-build-figma-wireframes](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-101-build-figma-wireframes)
+        -Jira Subtask: [SCRUM-101] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-101)
+        - BitBucket Branch: [SCRUM-101-build-figma-wireframes](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-101-build-figma-wireframes)
+- `Jira Task | SCRUM-98 | "Implementation: Home Preview Screen"`
+    - Jira Task: [SCRUM-98] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-98)
+    - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
+    - Subtasks (SCRUM-157 and SCRUM-99) were commited on the above branch and did not have their own branches
+    - `Jira Subtask | SCRUM-157 | "5A - Home Page Creation"`
+        - Jira Subtask: [SCRUM-157] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-157)
+        - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
+    - `Jira Subtask | SCRUM-99 | "5B - Envelope Creation Button"`
+        - Jira Subtask: [SCRUM-99] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-99)
+        - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
 
--`Jira Task | SCRUM-98 | "Implementation: Home Preview Screen"`
-- Jira Task: [SCRUM-98] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-98)
- - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
- 
-  -Subtasks (SCRUM-157 and SCRUM-99) were commited on the above branch and did not have their own branches
-
-  -`Jira Subtask | SCRUM-157 | "5A - Home Page Creation"`
-  - Jira Subtask: [SCRUM-157] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-157)
-  - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
-
-  -`Jira Subtask | SCRUM-99 | "5B - Envelope Creation Button"`
-  -Jira Subtask: [SCRUM-99] (https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-99)
-  - BitBucket Branch: [feature/SCRUM-98-implementation-home-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-98-implementation-home-page)
 # Sprint 2 Next Steps #
 
 ![Alt text](./images/burnup_chart_sprint1.png)
 
 **Features**
 
-  - Design and implement the transferring money page
-  - Design and implement the transfer functionality
-  - Design and implement the log history page
-  - Design and implement the navigation bar
-  - Design the streaks and badges definitions
-  - Design and implement the streaks and badges page
-  - Design and implement the unlock pop up
-  - Design and implement the Hive setup badge and streak storage
-  - Design and implement the import funds page
-  - Design and implement the fill envelopes page
-  - Design and implement the on tap envelopes pop up
+    - Design and implement the transferring money page
+    - Design and implement the transfer functionality
+    - Design and implement the log history page
+    - Design and implement the navigation bar
+    - Design the streaks and badges definitions
+    - Design and implement the streaks and badges page
+    - Design and implement the unlock pop up
+    - Design and implement the Hive setup badge and streak storage
+    - Design and implement the import funds page
+    - Design and implement the fill envelopes page
+    - Design and implement the on tap envelopes pop up
+
 **Bugs**
 
-  - Home page: App adjusting to keyboard and the container sizes overlapping
+    - Home page: App adjusting to keyboard and the container sizes overlapping
 
