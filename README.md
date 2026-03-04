@@ -149,3 +149,34 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   - Jira Task: [SCRUM-89](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-89)
   - BitBucket Branch: [SCRUM-89-unit-tests](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-89-unit-tests)
   - Pull Request: [PR #32](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/pull-requests/32)
+
+**Steven Kertes**: Designed the website page in Figma. Implemented the HTML and CSS of the website page. Implemented the Envelope Creation Page.
+- `Jira Task | SCRUM-76 | "Design: Website UI/UX Mockup"`
+  - Jira Task: [SCRUM-76](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-76?atlOrigin=eyJpIjoiZTY5OGNjYWEyMWNhNDVmNjg2NWNkNmI4Njg3MTdhYzMiLCJwIjoiaiJ9)
+  - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
+  - `Jira Subtask | SCRUM-77 | "1A: Sketch Low-Fidelity Wireframes | Included in SCRUM-76"`
+    - Jira Subtask: [SCRUM-77](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-77?atlOrigin=eyJpIjoiZGUzNzA1ZGY1ODE2NDkzYWFlOWM3YzBkODc4NWMwOWEiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
+  - `Jira Subtask | SCRUM-78 | "1B: Build High-Fidelity Mockup" | Included in SCRUM-76`
+    - Jira Subtask: [SCRUM-78](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-78?atlOrigin=eyJpIjoiMGM0NTlmZDE2NGUyNGM2NTlmMDk1OGRlNWYzNmI3M2YiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-76-design-website-ui-ux-mockup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-76-design-website-ui-ux-mockup)
+- `Jira Task | SCRUM-86 | "Implementation: HTML/CSS Templates"`
+  - Jira Task: [SCRUM-86](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-86?atlOrigin=eyJpIjoiMmY2NWMyNGFkMWE3NDY3ZjlmZDdlMTkyODExZGQxYjIiLCJwIjoiaiJ9)
+  - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
+  - `Jira Subtask | SCRUM-87 | "5A: Build the 4-Page Jinja2 Templates | Included in SCRUM-86"`
+    - Jira Subtask: [SCRUM-87](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-87?atlOrigin=eyJpIjoiNWU0YWRhZWZjZjBlNDc3MGJhMmM4ZWFjMDg5MmNkOGYiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
+  - `Jira Subtask | SCRUM-88 | "5B: Build the Contact Form and Wire to Flask" | Included in SCRUM-86`
+    - Jira Subtask: [SCRUM-88](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-88?atlOrigin=eyJpIjoiYjJlZWI3MWU5ZDAyNDllZDlhZTdkMjk2NGFjNzNkMWUiLCJwIjoiaiJ9)
+    - BitBucket Branch: [feature/SCRUM-86-implementation-html-css-templat](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-86-implementation-html-css-templat)
+- `Jira Task | SCRUM-172 | "Fix typos in webapp html & CSS"`
+  - Jira Task: [SCRUM-172](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-172?atlOrigin=eyJpIjoiMjY2YWUwNzFlYzk2NGM2N2I4OTgyMjI5NDMyMGZiZGYiLCJwIjoiaiJ9)
+  - BitBucket Branch: [SCRUM-172-fix-typos-in-webapp-html](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-172-fix-typos-in-webapp-html)
+- `Jira Task | SCRUM-171 | "Fix Envelope_creation_page location & comments"`
+  - Jira Task: [SCRUM-171](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-171?atlOrigin=eyJpIjoiN2I1YWEyZmUzMDRiNDRiODkwNzA0NDE0MTRlMDk3ZDMiLCJwIjoiaiJ9)
+  - BitBucket Branch: [bugfix/SCRUM-171-fix-envelope_creation_page-loc](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/bugfix/SCRUM-171-fix-envelope_creation_page-loc)
+- `Jira Task | SCRUM-168 | "Implementation: Envelope creating page"`
+  - Jira Task: [SCRUM-168](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-168?atlOrigin=eyJpIjoiYjVhYWU3ZTc3MjdkNDgwNmFmN2RkM2UzNTJiMzgyZjMiLCJwIjoiaiJ9)
+  - BitBucket Branch: [feature/SCRUM-168-implementation-envelope-creati](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-168-implementation-envelope-creati)
+
+
