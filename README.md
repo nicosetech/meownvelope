@@ -191,7 +191,7 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
   - Design the streaks and badges definitions
   - Design and implement the streaks and badges page
   - Design and implement the unlock pop up
-  - Design and implement the Hive setup bage and streak storage
+  - Design and implement the Hive setup badge and streak storage
   - Design and implement the import funds page
   - Design and implement the fill envelopes page
   - Design and implement the on tap envelopes pop up
