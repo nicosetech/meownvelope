@@ -1,5 +1,5 @@
 import 'package:hive_flutter/adapters.dart';
-import 'package:meownvelope_mobile/DataTypes/envelope_data.dart';
+import 'package:meownvelope_mobile/data_types/envelope_data.dart';
 
 part 'transaction_data.g.dart';
 

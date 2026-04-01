@@ -1,15 +1,20 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, g
 from flask_mail import Mail
 from dotenv import load_dotenv
 import os
 from forms import validate_contact_form
 from emailservice import send_support_email
+from api.api_routes import api
+from api.database import init_db
 
 #Setup Environment
 load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+with app.app_context():
+    init_db()
 
 #Email Setup
 
@@ -22,6 +27,9 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv('EMAIL_USER')
 
 #Creates mail object
 mail = Mail(app)
+
+app.register_blueprint(api)
+
 
 @app.route('/')
 def home():
@@ -70,4 +78,11 @@ def info():
     return render_template('info.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(
+        host='0.0.0.0',
+        port=8000,
+        ssl_context=(
+            "/etc/letsencrypt/live/szafall-gw.asuscomm.com/fullchain.pem",
+            "/etc/letsencrypt/live/szafall-gw.asuscomm.com/privkey.pem"
+        )
+    )

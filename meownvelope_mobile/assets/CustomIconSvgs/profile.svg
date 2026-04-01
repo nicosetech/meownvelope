@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   inkscape:export-filename="profile.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"><inkscape:page
+       x="0"
+       y="0"
+       width="32"
+       height="32"
+       id="page2"
+       margin="0"
+       bleed="0" /></sodipodi:namedview><defs
+     id="defs1" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><path
+       id="path1"
+       style="fill:#7597b4;fill-opacity:1;stroke:none;stroke-width:0.896792"
+       d="M 16.004167,0.00361371 A 16.000631,16.000631 0 0 0 0.00361861,16.00428 16.000631,16.000631 0 0 0 16.004167,32.004826 16.000631,16.000631 0 0 0 32.00483,16.00428 16.000631,16.000631 0 0 0 16.004167,0.00361371 Z m 0,2.74171979 A 13.258889,13.258889 0 0 1 29.263111,16.00428 13.258889,13.258889 0 0 1 24.083782,26.517008 c 0.0018,-1.073991 -0.01358,-3.080659 -0.143585,-3.990427 -0.18207,-1.274482 -1.060203,-2.720264 -2.131194,-3.898354 -1.070995,-1.178093 -2.752436,-1.810029 -2.752436,-1.810029 0,0 1.167352,-0.610442 1.692138,-1.178068 0.524787,-0.567627 1.627861,-2.024164 1.65999,-3.791301 C 22.440825,10.081692 21.733956,8.0253906 19.61339,6.6545198 17.492825,5.2836491 14.751128,5.5192615 13.091089,6.4724451 11.431051,7.4256293 10.049523,9.49257 10.049523,11.388228 c 0,1.895656 0.738997,2.98814 1.231654,3.748545 0.492657,0.760405 2.206214,1.724294 2.206214,1.724294 0,0 -1.092399,0.449772 -1.884933,0.974558 -0.792535,0.524786 -2.0563855,1.842109 -2.7204011,3.641375 -0.6339496,1.7178 -0.5364888,2.389583 -0.467056,5.399318 A 13.258889,13.258889 0 0 1 2.7453379,16.00428 13.258889,13.258889 0 0 1 16.004167,2.7453335 Z" /></g></svg>

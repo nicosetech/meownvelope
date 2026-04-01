@@ -249,3 +249,144 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 
 * Home page: App adjusting to keyboard and the container sizes overlapping
 
+# Sprint 2 Review #
+**Treston**: Focused on Login/Create Account implementation and envelope data changes in HiveDatabase.
+
+- `Jira Task | SCRUM-181 | "Design: Login and Create Account page"`
+    - Jira Task: [SCRUM-181](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-181)
+    - BitBucket Branch: [feature/SCRUM-181-design-login-pages](https://bitbucket.org/%7B%7D/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-181-design-login-pages)
+- `Jira Task | SCRUM-184 | "Research: Secure Login Functionality on Server"`
+    - Jira Task: [SCRUM-184](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-184)
+    - BitBucket Branch: [SCRUM-184-research-secure-login-function](https://bitbucket.org/%7B%7D/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-184-research-secure-login-function)
+- `Jira Task | SCRUM-182 | "Implementation: Login Page"`
+    - Jira Task: [SCRUM-182](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-182)
+    - BitBucket Branch: [feature/SCRUM-182-implementation-login-pages](https://bitbucket.org/%7B%7D/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-182-implementation-login-pages)
+- `Jira Task | SCRUM-167 | "Implementation:  Building Navigation Bar"`
+    - Jira Task: [SCRUM-167](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-167)
+    - BitBucket Branch: [feature/SCRUM-167-navigation-bar](https://bitbucket.org/%7B%7D/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-167-navigation-bar)
+- `Jira Task | SCRUM-14 | "Implementation: Envelope transfer functionality implementation"`
+    - Jira Task: [SCRUM-14](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-14)
+    - BitBucket Branch: [feature/SCRUM-14-envelope-transfer-hive](https://bitbucket.org/%7B%7D/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-14-envelope-transfer-hive)
+    - BitBucket Branch: [bugfix/SCRUM-14-envelope-transfer-update](https://bitbucket.org/%7B%7D/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/bugfix/SCRUM-14-envelope-transfer-update)
+- `Jira Task | SCRUM-189 | "Implementation: Delete Envelope in Details"`
+    - Jira Task: [SCRUM-189](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-189)
+    - BitBucket Branch: [feature/SCRUM-189-implementation-delete-envelope](https://bitbucket.org/%7B%7D/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-189-implementation-delete-envelope)
+
+    **Emma Taylor**: Designed and implemented the page for acheivement badges and savings streaks, as well as defined the unlock conditions for the badges and designed the badge unlock pop up that will be implemented next sprint.
+
+- `Jira Task | SCRUM-107 | "Design: Streaks & Badge definitions"`
+    - Jira Task: [SCRUM-107](https://cs3398-ewoks-s26.atlassian.net/issues?filter=-1&jql=assignee%20%3D%20currentUser()%20order%20by%20updated%20DESC&selectedIssue=SCRUM-107)
+    - BitBucket Branch: [SCRUM-107-streak-and-badge-defs](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-107-streak-and-badge-defs)
+
+- `Jira Task | SCRUM-163 | "Design: Streaks and Badges page"`
+    - Jira Task: [SCRUM-163](https://cs3398-ewoks-s26.atlassian.net/issues?filter=-1&jql=assignee%20%3D%20currentUser()%20order%20by%20updated%20DESC&selectedIssue=SCRUM-163)
+    - BitBucket Branch: [SCRUM-163-streak-and-badge-designs](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-163-streak-and-badge-designs)
+
+- `Jira Task | SCRUM-109 | "Design: Badge unlock pop up"`
+    - Jira Task: [SCRUM-109](https://cs3398-ewoks-s26.atlassian.net/issues?filter=-1&jql=assignee%20%3D%20currentUser()%20order%20by%20updated%20DESC&selectedIssue=SCRUM-109)
+    - BitBucket Branch:[SCRUM-109-badge-unlock-popup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-109-badge-unlock-popup)
+
+    - `Jira Task | SCRUM-164 | "Design: Streaks and Badge Designs"`
+    - Jira Task: [SCRUM-164](https://cs3398-ewoks-s26.atlassian.net/issues?filter=-1&jql=assignee%20%3D%20currentUser()%20order%20by%20updated%20DESC&selectedIssue=SCRUM-164)
+    - BitBucket Branch:[SCRUM-164-badge-designs](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-164-badge-designs)
+
+    - `Jira Task | SCRUM-165 | "Implementation: Building Streaks & Badges page"`
+    - Jira Task: [SCRUM-165](https://cs3398-ewoks-s26.atlassian.net/issues?filter=-1&jql=assignee%20%3D%20currentUser()%20order%20by%20updated%20DESC&selectedIssue=SCRUM-165)
+    - BitBucket Branch:[feature/SCRUM-165-streak-and-badges-page](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-165-streak-and-badges-page)
+
+    **Nico San Esteban**: Designed fill envelopes page, the logged out state of the profile page, the envelope details page with a transfer money drop down, and implemented the fill envelopes page. 
+
+    - `Jira Task | SCRUM-134 | "Design: Envelope Transferring money"`
+    - Jira Task: [SCRUM-134](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-134)
+    - BitBucket Branch: [SCRUM-134-design-envelope-transferring](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-134-design-envelope-transferring)
+
+    - `Jira Task | SCRUM-175 | "Design: Fill Envelopes page (Home Page)"`
+    - Jira Task: [SCRUM-175](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-175)
+    - BitBucket Branch: [SCRUM-175-design-fill-envelopes-page](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-175-design-fill-envelopes-page)
+
+    - `Jira Task | SCRUM-176 | "Implementation: Fill Envelopes page implementation (Home Page)"`
+    - Jira Task: [SCRUM-176](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-176)
+    - BitBucket Branch: [feature/SCRUM-176-implementation-fill-envelopes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-176-implementation-fill-envelopes)
+
+    - `Jira Task | SCRUM-177 | "Design: On tap envelopes popup (Home Screen)"`
+    - Jira Task: [SCRUM-177](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-177)
+    - BitBucket Branch: [SCRUM-177-design-on-tap-envelopes-popup-](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-177-design-on-tap-envelopes-popup-)
+
+    - `Jira Task | SCRUM-179 | "Design: Profile page"`
+    - Jira Task: [SCRUM-179](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-179)
+    - BitBucket Branch: [SCRUM-179-design-profile-page](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-179-design-profile-page)
+
+    - `Jira Task | SCRUM-192 | "Bugfix: Envelope Font on Home Page"`
+    - Jira Task: [SCRUM-192](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-192)
+    - BitBucket Branch: [bugfix/SCRUM-192-bugfix-envelope-font-on-home](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/bugfix/SCRUM-192-bugfix-envelope-font-on-home)
+
+    **Steven Kertes** : Primarily focused on the profile page, envelope details, hive setup for badges, and refactoring code to follow SRP.
+
+- `Jira Task | SCRUM-135 | "Implementation: Envelope transfer design implementation page"`
+    - Jira Task: [SCRUM-135](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-135)
+    - BitBucket Branch: [feature/SCRUM-135-implementation-envelope-transf](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-135-implementation-envelope-transf)
+- `Jira Task | SCRUM-180 | "Implementation: profile page"`
+    - Jira Task: [SCRUM-180](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-180)
+    - BitBucket Branch: [feature/SCRUM-180-implementation-profile-page-ne](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-180-implementation-profile-page-ne)
+- `Jira Task | SCRUM-190 | "Implementation: Add balance amount in envelope details"`
+    - Jira Task: [SCRUM-190](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-190)
+    - BitBucket Branch: [feature/SCRUM-190-implementation-add-balance-amo](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-190-implementation-add-balance-amo)
+- `Jira Task | SCRUM-191 | "Implementation: SRP implementation on Envelope Details Page and Envelope Creation Page"`
+    - Jira Task: [SCRUM-191](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-191)
+    - BitBucket Branch: [feature/SCRUM-191-implementation-srp-implementation](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-191-implementation-srp-implementation)
+- `Jira Task | SCRUM-178 | "Implementation: On tap envelopes page implementation (Home Screen)"`
+    - Jira Task: [SCRUM-178](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-178)
+    - BitBucket Branch: [feature/SCRUM-178-implementation-on-tap-envelope](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-178-implementation-on-tap-envelope)
+- `Jira Task | SCRUM-185 | "Bug fix streak and badge"`
+    - Jira Task: [SCRUM-185](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-185)
+    - BitBucket Branch: [bugfix/SCRUM-185-bug-fix-streak-and-badge](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/bugfix/SCRUM-185-bug-fix-streak-and-badge)
+- `Jira Task | SCRUM-115 | "Implementation: Tracking Streaks"`
+    - Jira Task: [SCRUM-115](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-115)
+    - BitBucket Branch: [feature/SCRUM-115-implementation-tracking-streak](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-115-implementation-tracking-streak)
+- `Jira Task | SCRUM-118 | "Implementation: Unlocking Badges"`
+    - Jira Task: [SCRUM-118](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-118)
+    - BitBucket Branch: [feature/SCRUM-118-implementation-unlocking-badge](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-118-implementation-unlocking-badge)
+- `Jira Task | SCRUM-111 | "Implementation: Hive set up Badge and Streak Storage"`
+    - Jira Task: [SCRUM-111](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-111)
+    - BitBucket Branch: [feature/SCRUM-111-implementation-hive-set-up-bad](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-111-implementation-hive-set-up-bad)
+
+
+    **Jake Olsen**: Designed and implemented the import funds page which is the main component of adding funds to the users account by routing through the hive database. Also designed recurring payments page but was not able to finish implementation this sprint.
+
+- `Jira Task | SCRUM - 174 | "Implementation: Import Funds page implementation (Home Page)"`
+    - Jira Task: [SCRUM-174](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-174)
+    - Bitbucket Branch: [feature/SCRUM-174-implementation-import-funds-pa](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-174-implementation-import-funds-pa)
+
+- `Jira Task | SCRUM - 173 | "Design: Import Funds page (Home Screen)"`
+    - Jira Task: [SCRUM-173](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-173)
+    - Bitbucket Branch: [SCRUM-173-design-import-funds-page-home-]https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-173-design-import-funds-page-home-
+
+- `Jira Task | SCRUM - 132 | "Design: Recurring Payment addition (Import Funds Page)"`
+    - Jira Task: [SCRUM-132](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-132)
+    - Bitbucket Branch:[SCRUM-132-design-recurring-payment-addit](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-132-design-recurring-payment-addit)
+    
+- `Jira Task | SCRUM - 188 | "Bug Fix: Import funds page text placement and scrollable"`
+    - Jira Task: [SCRUM - 188](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-188)
+    - Bitbucket Branch:[bugfix/SCRUM-188-bug-fix-import-funds-page-text](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/bugfix/SCRUM-188-bug-fix-import-funds-page-text)
+
+
+# Sprint 3 Next Steps #
+
+![Alt text](./images/burnup_chart_sprint2.png)
+
+**Features**
+
+* Design and implement a monthly overview page
+* Design and implement collaborative envelopes 
+* Refactoring architecture to follow flutter principles and SOLID
+* Design and implement recurring payments page
+* Implement badge unlock page
+* Add professional Icon and Loading screen.
+* Inside fill envelopes page, add indicator for number of bills in a stack.
+
+**Bugs**
+
+* Fill Envelopes has wonky sizing for andorid.
+* Transfer money doesn't update envelope balance until refresh on IOS
+* Envelope Details "Edit color" button has wonky dimensions on S21 (andoid)
+* Profile page doesn't update when a person logs into an account after creating one.

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:meownvelope_mobile/utils/widgets/meownvelope_app_bar.dart';
 import 'package:meownvelope_mobile/utils/hive/hive_database.dart';
-import 'package:meownvelope_mobile/meownvelope_colors.dart';
+import 'package:meownvelope_mobile/utils/styling/meownvelope_colors.dart';
+import 'package:meownvelope_mobile/utils/widgets/envelope_preview.dart';
+import 'package:meownvelope_mobile/utils/styling/meownvelope_font.dart';
+import 'package:meownvelope_mobile/utils/widgets/labeled_radio_option.dart';
+import 'package:meownvelope_mobile/utils/widgets/meowStyledButton.dart';
 
 class EnvelopeCreationPage extends StatefulWidget {
   const EnvelopeCreationPage({super.key});
@@ -18,39 +20,9 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _goalController = TextEditingController();
 
-  // ── Preset colors (matches design grid) ────────────────────────
-  final List<Color> _presetColors = [
-  const Color(0xFFFFCCCC), // pink
-  const Color(0xFFFFEDCC), // yellow
-  const Color(0xFFCCF5D5), // green
-  const Color(0xFFE8CCFF), // purple
-  const Color(0xFFCCE5FF), // blue
-  const Color(0xFFE8E8E8), // grey
-  const Color(0xFFFFE5F2), // light pink
-  const Color(0xFFCCFFED), // mint
-  const Color(0xFFFFFFFF), // white
-  ];
 
   Color _selectedColor = const Color(0xFFFFFFFF); // default white
   bool _placeAtStart = true; // true is front of list, false is end of list
- 
-  
-  // ── Fonts ─────────────────────────────────────────────────────
-
-  // Shared test style using Martian Mono font
-  static TextStyle _monoStyle(double size, Color color, {
-    double? letterSpacing,
-    FontStyle? fontStyle,
-  }) => GoogleFonts.martianMono(
-    textStyle: TextStyle(
-      fontSize: size,
-      color: color,
-      fontWeight: FontWeight.w600,
-      letterSpacing: letterSpacing,
-      fontStyle: fontStyle,
-    ),
-  );
-
 
 // Envelope preview updates in real time
   @override
@@ -102,6 +74,9 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
 
     await HiveDatabase.newEnvelope(name, _selectedColor.value, goal, 0.0, await HiveDatabase.envelopeOrder(_placeAtStart));
 
+    // Passes envelope count into checkEnvelopeBadges() to check if user has hit 1,3,or 9 envelopes
+    await HiveDatabase.checkEnvelopeBadges(HiveDatabase.getEnvelopes().length);
+
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('"$name" envelope created!')),
@@ -114,6 +89,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MeownvelopeColors.bgColor,
+      appBar: MeownvelopeAppBar(titleText: 'Envelope Creation'),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -125,39 +101,6 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
-              // ── TOP HEADER: paw + title ──────────────────────────
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: w * 0.11,
-                    height: w * 0.11,
-                    child: Image.asset('assets/cat_paw.png',width: w * 0.11,height: h * 0.11,color:MeownvelopeColors.darkBlue,),
-                  ),
-                  SizedBox(width: w * 0.02),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Meownvelope',
-                        style: GoogleFonts.mochiyPopPOne(
-                          textStyle: TextStyle(fontSize: w * 0.06, color: MeownvelopeColors.darkBlue),
-                          ),
-                        ),
-                      Padding(
-                        padding: EdgeInsets.only(left: w * 0.3),
-                        child: Text("Creation",
-                          style: GoogleFonts.mochiyPopPOne(
-                            textStyle: TextStyle(fontSize: w * 0.06, color:MeownvelopeColors.darkBlue),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: h * 0.04),
-
               // ── ENVELOPE NAME INPUT ──────────────────────────────
               Center(
                 child: Stack(
@@ -177,10 +120,10 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                         ],
                         controller: _nameController,
                         textAlign: TextAlign.center,
-                        style: _monoStyle(w * 0.065, MeownvelopeColors.darkBlue),
+                        style: martian(fontSize: w * 0.065, color: MeownvelopeColors.darkBlue),
                         decoration: InputDecoration(
                           hintText: 'New Envelope',
-                          hintStyle: _monoStyle(w * 0.05, MeownvelopeColors.darkBlue.withOpacity(0.5), letterSpacing: 1.2),
+                          hintStyle: martian(fontSize: w * 0.05, color: MeownvelopeColors.darkBlue.withOpacity(0.5), letterSpacing: 1.2),
                           border: UnderlineInputBorder(borderSide: BorderSide(color: MeownvelopeColors.darkBlue)),
                           focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: MeownvelopeColors.darkBlue, width: 2)),
                           enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: MeownvelopeColors.darkBlue.withOpacity(0.5))),
@@ -206,32 +149,12 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                 children: [
                   Expanded(
                     flex: 4,
-                    child: Container(
+                    child: EnvelopePreview(  
+                      color: _selectedColor,
+                      label: _nameController.text.isEmpty ? 'New Envelope' : _nameController.text,
+                      width: double.infinity,
                       height: h * 0.20,
-                      decoration: BoxDecoration(
-                        color: _selectedColor,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child:Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/envelope.png',
-                            fit: BoxFit.fill,
-                            width: double.infinity,
-                            height: h * 0.20,
-                          ),
-                          Positioned(
-                            top: 10,
-                            child:
-                            Text(
-                              _nameController.text.isEmpty ? 'New Envelope' : _nameController.text,
-                              style: _monoStyle(w * 0.037,MeownvelopeColors.darkBlue.withOpacity(0.8),
-                            ),
-                          ),
-                          ),
-                        ],
-                      ),
+                      fontSize: w * 0.037,
                     ),
                   ),
                   SizedBox(width: w * 0.07),
@@ -245,9 +168,9 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10,
                       ),
-                      itemCount: _presetColors.length,
+                      itemCount: MeownvelopeColors.presetEnvelopeColors.length,
                       itemBuilder: (context, index) {
-                        final color = _presetColors[index];
+                        final color = MeownvelopeColors.presetEnvelopeColors[index];
                         final isSelected = _selectedColor == color;
                         return GestureDetector(
                           onTap: () => setState(() => _selectedColor = color),
@@ -269,7 +192,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
               SizedBox(height: h * 0.06),
 
               // ── PLACEMENT RADIO BUTTONS ──────────────────────────
-              _PlacementOption(
+              LabeledRadioOption(
                 label: 'Place my envelope at the start of my list.',
                 value: true,
                 groupValue: _placeAtStart,
@@ -277,7 +200,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                 onChanged: (val) => setState(() => _placeAtStart = val!),
               ),
               SizedBox(height: h * 0.03),
-              _PlacementOption(
+              LabeledRadioOption(
                 label: 'Place my envelope at the end of my list.',
                 value: false,
                 groupValue: _placeAtStart,
@@ -291,10 +214,10 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Envelope goal:',
-                    style: _monoStyle(w * 0.055, MeownvelopeColors.darkBlue,),
+                    style: martian(fontSize: w * 0.055, color: MeownvelopeColors.darkBlue,),
                   ),
                   Text("\$",
-                    style: _monoStyle( w * 0.055, MeownvelopeColors.darkBlue),
+                    style: martian( fontSize: w * 0.055,color: MeownvelopeColors.darkBlue),
                   ),
                   SizedBox(width: w * 0.015),
                   SizedBox(
@@ -306,7 +229,7 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                       ],
                       controller: _goalController,
                       keyboardType: TextInputType.number,
-                      style: _monoStyle(w * 0.04, MeownvelopeColors.darkBlue,),
+                      style: martian(fontSize: w * 0.04, color: MeownvelopeColors.darkBlue,),
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                         enabledBorder: OutlineInputBorder(
@@ -322,37 +245,29 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
                   ),
                 ],
               ),
-              SizedBox(height: h * 0.07),
+              SizedBox(height: h * 0.1),
 
               // ── CREATE / CANCEL BUTTONS ──────────────────────────
               Row(
                 children: [
                   Expanded(
-                    child: ElevatedButton(
+                    child: MeowStyledButton(
+                      text: 'Create',
                       onPressed: _createEnvelope,
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: MeownvelopeColors.medBlue,
-                        foregroundColor: Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: h * 0.018),
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                      ),
-                          child: Text('Create', style: _monoStyle(w * 0.04, Colors.white)),
-                      ),
-                    ),
+                      backgroundColor: MeownvelopeColors.medBlue,
+                      textColor: Colors.white,
+                      verticalPadding: h * 0.025,
+                    )
+                  ),
                   SizedBox(width: w * 0.04),
                   Expanded(
-                    child: ElevatedButton(
+                    child: MeowStyledButton(
+                      text: 'Cancel',
                       onPressed: () => Navigator.pop(context),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: MeownvelopeColors.medBlue,
-                        foregroundColor: Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: h * 0.018),
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                      ),
-                          child: Text('Cancel', style: _monoStyle(w * 0.04, Colors.white)),
-                        ),
+                      backgroundColor: MeownvelopeColors.medBlue,
+                      textColor: Colors.white,
+                      verticalPadding: h * 0.025,
+                    )
                       ),
                     ],
                   ),
@@ -365,53 +280,3 @@ class _EnvelopeCreationPageState extends State<EnvelopeCreationPage> {
     );
   }
 }
-
-// ─── Placement Option Widget ──────────────────────────────────────────────────
-
-class _PlacementOption extends StatelessWidget {
-  final String label;
-  final bool value;
-  final bool groupValue;
-  final Color activeColor;
-  final ValueChanged<bool?> onChanged;
-
-  const _PlacementOption({
-    required this.label,
-    required this.value,
-    required this.groupValue,
-    required this.activeColor,
-    required this.onChanged,
-  });
-
-  @override
-Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Transform.scale(
-          scale: 1.8,
-          child: Radio<bool>(
-            value: value,
-            groupValue: groupValue,
-            onChanged: onChanged,
-            activeColor: activeColor,
-            fillColor: MaterialStateProperty.all(activeColor),
-          ),
-        ),
-        const SizedBox(width:10),
-        Expanded(
-          child: Text(label, style: GoogleFonts.martianMono(
-            textStyle: TextStyle(
-              fontSize: 17,
-              color: activeColor,
-              fontWeight: FontWeight.w600,
-              height: 1.8,
-            ),
-          )),
-        ),
-      ],
-    );
-  }
-}
-
-
-

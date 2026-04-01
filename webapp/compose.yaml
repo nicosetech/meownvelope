@@ -5,6 +5,32 @@ services:
       target: builder
     # flask requires SIGINT to stop gracefully
     # (default stop signal from Compose is SIGTERM)
+    restart: always
     stop_signal: SIGINT
     ports:
       - '1240:8000'
+    container_name: mownvelope-web
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+    depends_on:
+    - mysql
+    
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_ROOT_PASSWORD: /run/secrets/db_password
+      MYSQL_TCP_PORT: 8098
+    ports:
+      - 8098:8098
+    expose:
+      - 8098
+    volumes:
+      - /database:/var/lib/mysql
+    secrets:
+    - db_password
+
+secrets:
+   db_password:
+     file: db_password.txt
