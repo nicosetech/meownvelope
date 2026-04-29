@@ -22,7 +22,7 @@ class EnvelopeDataAdapter extends TypeAdapter<EnvelopeData> {
       budgetTarget: fields[3] as double,
       balance: fields[4] as double,
       displayOrder: fields[5] as int,
-      local: fields[2] as bool,
+      serverEnvID: fields[2] as String?,
       users: (fields[6] as Map).cast<int, String>(),
     );
   }
@@ -36,7 +36,7 @@ class EnvelopeDataAdapter extends TypeAdapter<EnvelopeData> {
       ..writeByte(1)
       ..write(obj.color)
       ..writeByte(2)
-      ..write(obj.local)
+      ..write(obj.serverEnvID)
       ..writeByte(3)
       ..write(obj.budgetTarget)
       ..writeByte(4)

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:meownvelope_mobile/pages/home_pages/abstract_home_page.dart';
-import 'package:meownvelope_mobile/pages/home_pages/envelope_list_page.dart';
+import 'package:meownvelope_mobile/pages/home_pages/envelope_list_view.dart';
 import 'package:meownvelope_mobile/utils/widgets/meownvelope_app_bar.dart';
 import 'package:meownvelope_mobile/utils/styling/meownvelope_colors.dart';
 import 'package:meownvelope_mobile/navigation_drawer.dart';
-import 'package:meownvelope_mobile/pages/home_pages/profile/profile_page.dart';
-import 'package:meownvelope_mobile/pages/home_pages/streaks_and_badges.dart';
+import 'package:meownvelope_mobile/pages/home_pages/profile/profile_page_view.dart';
+import 'package:meownvelope_mobile/pages/home_pages/streaks_and_badges_view.dart';
 
 class HomePageViewer extends StatefulWidget {
   const HomePageViewer({super.key});
@@ -16,13 +16,14 @@ class HomePageViewer extends StatefulWidget {
 
 class _HomePageViewerState extends State<HomePageViewer> {
 
-  final List<AbstractHomePage> pages = [EnevelopeListPage(),ProfilePage(), StreaksAndBadgesPage()];
+  final List<AbstractHomePage> pages = [EnevelopeListPage(),ProfilePageView(), StreaksAndBadgesView()];
 
   Widget currentPage = EnevelopeListPage();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: MeownvelopeColors.bgColor,
       // bar to display title and paw icon
       appBar: MeownvelopeAppBar(titleText: "Meownvelope"),

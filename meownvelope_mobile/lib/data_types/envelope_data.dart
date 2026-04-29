@@ -3,7 +3,7 @@ import 'package:hive_flutter/adapters.dart';
 part 'envelope_data.g.dart';
 
 @HiveType(typeId: 0)
-class EnvelopeData extends HiveObject{
+class EnvelopeData extends HiveObject {
   @HiveField(0)
   String name;
 
@@ -11,7 +11,7 @@ class EnvelopeData extends HiveObject{
   int color;
 
   @HiveField(2)
-  bool local;
+  String? serverEnvID;
 
   @HiveField(3)
   double budgetTarget;
@@ -25,20 +25,18 @@ class EnvelopeData extends HiveObject{
   @HiveField(6)
   Map<int, String> users;
 
-
   EnvelopeData({
     required this.name,
     required this.color,
     required this.budgetTarget,
     required this.balance,
     required this.displayOrder,
-    required this.local,
-    required this.users
+    required this.serverEnvID,
+    required this.users,
   });
 
   @override
   String toString() {
-    return "EnvelopeData(name: $name, color: $color, local: $local, budgetTarget: $budgetTarget, balance: $balance, displayOrder: $displayOrder, users: $users)";
+    return "EnvelopeData(name: $name, color: $color, serverEnvID: $serverEnvID, budgetTarget: $budgetTarget, balance: $balance, displayOrder: $displayOrder, users: $users)";
   }
-
 }

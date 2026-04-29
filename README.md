@@ -390,3 +390,251 @@ Having a personal AI assistent to help establish goals, answer questions, and ma
 * Transfer money doesn't update envelope balance until refresh on IOS
 * Envelope Details "Edit color" button has wonky dimensions on S21 (andoid)
 * Profile page doesn't update when a person logs into an account after creating one.
+
+
+# Sprint 3 Review #
+
+**Steven Kertes**
+    
+* Refactored the streaks, badges, and profile page. 
+* Extracted extracted view models on the envelope creation page and envelope details page. 
+* Unit testing on streaks and badges, profile page, envelope details page, and envelope creation page.
+* Two bug fixes on double login and Daily deposit badge call in the fill envelope page.
+* Implemented the UI for the cloud/share button and the input shareable code.
+
+- `Jira Task | SCRUM-200 | "Refactor: Extract Badges and Streaks logic"`
+    - Jira Task: [SCRUM-200](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-200)
+    - BitBucket Branch: [SCRUM-200-refactor-extract-badges-and-streaks](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-200-refactor-extract-badges-and-streaks)
+- `Jira Task | SCRUM-197 | "Refactor: Profile Page"`
+    - Jira Task: [SCRUM-197](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-197)
+    - BitBucket Branch: [SCRUM-197-refactor-profile-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-197-refactor-profile-page)
+- `Jira Task | SCRUM-208 | "Bug Fix: Double log in"`
+    - Jira Task: [SCRUM-208](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-208)
+    - BitBucket Branch: [bugfix/SCRUM-208-bug-fix-double-log-in-fixed-version](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/bugfix/SCRUM-208-bug-fix-double-log-in-fixed-version)
+- `Jira Task | SCRUM-193 | "Refactor: Extract Envelope ViewModels"`
+    - Jira Task: [SCRUM-193](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-193)
+    - BitBucket Branch: [SCRUM-193-refactor-extract-envelope-view](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-193-refactor-extract-envelope-view)
+- `Jira Task | SCRUM-204 | "Unit Testing: Envelope Creation Page"`
+    - Jira Task: [SCRUM-204](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-204)
+    - BitBucket Branch: [SCRUM-204-unit-testing-envelope-creation-docs](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-204-unit-testing-envelope-creation-docs)    
+    - BitBucket Branch: [SCRUM-204-unit-testing-envelope-creation-test-file](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-204-unit-testing-envelope-creation-test-file)
+- `Jira Task | SCRUM-207 | "Unit Testing: Streaks and Badges Hive"`
+    - Jira Task: [SCRUM-207](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-207)
+    - BitBucket Branch: [SCRUM-207-unit-testing-streaks-and-badge](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-207-unit-testing-streaks-and-badge)
+    - BitBucket Branch: [SCRUM-207-unit-testing-streaks-and-badge-docs](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-207-unit-testing-streaks-and-badge-docs)
+- `Jira Task | SCRUM-206 | "Unit Testing: Profile Page"`
+    - Jira Task: [SCRUM-206](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-206)
+    - BitBucket Branch: [SCRUM-206-unit-testing-profile-page](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-206-unit-testing-profile-page)
+    - BitBucket Branch: [SCRUM-206-unit-testing-profile-page-docs](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-206-unit-testing-profile-page-docs)
+- `Jira Task | SCRUM-205 | "Unit Testing: Envelope Details Page"`
+    - Jira Task: [SCRUM-205](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-205)
+    - BitBucket Branch: [SCRUM-205-unit-testing-envelope-details-](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-205-unit-testing-envelope-details-)
+    - BitBucket Branch: [SCRUM-205-unit-testing-envelope-details-docs](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/SCRUM-205-unit-testing-envelope-details-docs)
+- `Jira Task | SCRUM-234 | "Bug Fix: Fix Daily Deposit Badge Call in Fill Envelopes Page"`
+    - Jira Task: [SCRUM-234](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-234)
+    - BitBucket Branch: [bugfix/SCRUM-234-bug-fix-fix-daily-deposit-badge](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/bugfix/SCRUM-234-bug-fix-fix-daily-deposit-badge)
+- `Jira Task | SCRUM-211 | "Implement: Cloud/Share Button"`
+    - Jira Task: [SCRUM-211](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-211)
+    - BitBucket Branch: [feature/SCRUM-211-implement-cloud-share-button](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-211-implement-cloud-share-button)
+- `Jira Task | SCRUM-212 | "Implement: Input Shareable Code"`
+    - Jira Task: [SCRUM-212](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-212)
+    - BitBucket Branch: [feature/SCRUM-212-implement-input-shareable-code](https://bitbucket.org/cs3398-ewoks-s26/%7B6a06f99a-ad82-474e-9362-5ce0e6da6898%7D/branch/feature/SCRUM-212-implement-input-shareable-code)
+   
+    
+**Emma Taylor**
+
+    - Implemented badge unlock popup and popups for badge descriptions
+    - Refactored the streaks and badges page
+    - Unit testing for the streaks and badges page and badge unlock notifier
+
+- `Jira Task | SCRUM-166 | "Implement bagde unlock popup"`
+    - Jira Task: [SCRUM-166](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-166)
+    - BitBucket Branch: [SCRUM-166-badge-unlock-popup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-166-badge-unlock-popup)
+
+- `Jira Task | SCRUM-194 | "Add badge description popups"`
+    - Jira Task: [SCRUM-194](hhttps://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-194)
+    - BitBucket Branch: [SCRUM-194-badge-details](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-194-badge-details)
+
+- `Jira Task | SCRUM-239 | "Refactor: Streaks and Badges Page"`
+    - Jira Task: [SCRUM-239](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-239)
+    - BitBucket Branch: [SCRUM-239-badge-refactoring](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-239-badge-refactoring)
+
+- `Jira Task | SCRUM-195 | "Unit testing: Streaks and Badges page"`
+    - Jira Task: [SCRUM-195](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-195)
+    - BitBucket Branch: [SCRUM-195-unit-testing-badges-page](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-195-unit-testing-badges-page)
+    - BitBucket Branch: [SCRUM-195-unit-testing-badges-doc](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-195-unit-testing-badges-doc)
+
+- `Jira Task | SCRUM-196 | "Unit testing: Badge Unlock Notifier"`
+    - Jira Task: [SCRUM-196](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-196)
+    - BitBucket Branch: [SCRUM-196-unit-testing-badge-unlock-notifier](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-196-unit-testing-badge-unlock-notifier)
+
+- `Jira Task | SCRUM-244 | "Unit testing: Badge Unlock Notifier Documentation"`
+    - Jira Task: [SCRUM-244](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-244)
+    - BitBucket Branch: [SCRUM-244-unit-testing-doc](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-244-unit-testing-doc)
+
+
+**Jake Olsen**
+
+    -Implemented recurring deposits page
+    -Implemented managing created recurring deposits
+    -Refactored import funds page
+    -Input field unit testing of import funds and recurring payments pages
+
+- `Jira Task | SCRUM-186 | "Design: Manage existing recurring payments page"`
+    - Jira Task: [SCRUM-186](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-186)
+    - BitBucket Branch: [SCRUM-186-design-manage-existing-recurri](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-186-design-manage-existing-recurri)
+
+- `Jira Task | SCRUM-15 | "Implementation: Recurring deposits implementation (Import Funds Page)"`
+    - Jira Task: [SCRUM-15](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-15)
+    - BitBucket Branch: [SCRUM-15-implementation-reoccurring-paym](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-15-implementation-reoccurring-paym)
+
+- `Jira Task | SCRUM-238 | "Refactor: Import Funds page"`
+    - Jira Task: [SCRUM-238](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-238)
+    - BitBucket Branch: [SCRUM-238-refactor-import-funds-page](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-238-refactor-import-funds-page)
+
+- `Jira Task | SCRUM-187 | "feature/SCRUM-187-implementation-manage-existing"`
+    - Jira Task: [SCRUM-187](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-187)
+    - BitBucket Branch: [SCRUM-187-implementation-manage-existing](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-187-implementation-manage-existing)
+
+- `Jira Task | SCRUM-241 | "Unit Testing: Import Funds Page"`
+    - Jira Task: [SCRUM-241](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-241)
+    - BitBucket Branch: [SCRUM-241-unit-testing-import-funds-page](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-241-unit-testing-import-funds-page)
+    - BitBucket Branch: [SCRUM-241-unit-testing-import-funds-page-doc](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-241-unit-testing-import-funds-page-doc)
+
+- `Jira Task | SCRUM-242 | "Unit Testing: Recurring Deposits page"`
+    - Jira Task: [SCRUM-242](https://cs3398-ewoks-s26.atlassian.net/jira/software/projects/SCRUM/boards/1?selectedIssue=SCRUM-242)
+    - BitBucket Branch: [SCRUM-242-unit-testing-recurring-deposit](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-242-unit-testing-recurring-deposit)
+    - BitBucket Branch: [SCRUM-242-unit-testing-recurring-deposit-doc](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-242-unit-testing-recurring-deposit-doc)
+
+**Nico San Esteban**
+
+* Refactored Bill UI and Logic to follow Flutter Architecture
+* Designed UI features for client to backend interactions
+* Implemented features suggested by management to the Fill envelopes page
+* Added withdraw button to the envelope details page
+
+- `Jira Task | SCRUM-210 | "Design: Input Shareable Code"`
+    - Jira Task: [SCRUM-210](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-210)
+    - BitBucket Branch: [SCRUM-210-design-input-shareable-code](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-210-design-input-shareable-code)
+
+- `Jira Task | SCRUM-209 | "Design: Cloud/Share Button"`
+    - Jira Task: [SCRUM-209](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-209)
+    - BitBucket Branch: [SCRUM-209-design-cloud-share-button](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-209-design-cloud-share-button)
+
+- `Jira Task | SCRUM-231 | "Refactor: Bill UI"`
+    - Jira Task: [SCRUM-231](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-231)
+    - BitBucket Branch: [SCRUM-231-refactor-bill-ui](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-231-refactor-bill-ui)
+
+- `Jira Task | SCRUM-232 | "Refactor: Bill Logic"`
+    - Jira Task: [SCRUM-232](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-232)
+    - BitBucket Branch: [SCRUM-232-refactor-bill-logic](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-232-refactor-bill-logic)
+
+- `Jira Task | SCRUM-235 | "Feature: Withdraw Button on Envelope Details Page"`
+    - Jira Task: [SCRUM-235](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-235)
+    - BitBucket Branch: [feature/SCRUM-235-feature-withdraw-button-on-env](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-235-feature-withdraw-button-on-env)
+
+- `Jira Task | SCRUM-230 | "Feature: Select and Drag Multiple Bills"`
+    - Jira Task: [SCRUM-230](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-230)
+    - BitBucket Branch: [feature/SCRUM-230-feature-select-and-drag-multiple-bills](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-230-feature-select-and-drag-multiple-bills)
+
+- `Jira Task | SCRUM-229 | "Feature: Select and Drag Multiple Bills"`
+    - Jira Task: [SCRUM-229](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-229)
+    - BitBucket Branch: [feature/SCRUM-229-display-indicator-for-amount](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/feature/SCRUM-229-display-indicator-for-amount)
+
+- `Jira Task | SCRUM-236 | "Unit Testing: Testing Plan"`
+    - Jira Task: [SCRUM-236](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-236)
+    - BitBucket Branch: [SCRUM-236-unit-testing-testing-plan](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-236-unit-testing-testing-plan)
+
+- `Jira Task | SCRUM-237 | "Unit Testing: Test Execution and Results"`
+    - Jira Task: [SCRUM-237](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-237)
+    - BitBucket Branch: [SCRUM-237-unit-testing-test-execution](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-237-unit-testing-test-execution)
+
+**Treston Fallavollita**
+
+* Refactored HiveDatabase file and extracted Envelope Logic
+* Refactored Credential pages to follow Flutter architecture
+* Designed Backend API Flowchart
+* Implemented API backend
+* Integrated backend API into client app
+
+- `Jira Task | SCRUM-203 | "Refactor: Extract Envelopes Logic"`
+    - Jira Task: [SCRUM-203](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-203)
+    - BitBucket Branch: [SCRUM-203-refactor-hive_envelopes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-203-refactor-hive_envelopes)
+    
+- `Jira Task | SCRUM-214 | "Refactor: CreateAccountPage to Follow Flutter Architecture"`
+    - Jira Task: [SCRUM-214](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-214)
+    - BitBucket Branch: [SCRUM-214-refactor-create_account_page](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-214-refactor-create_account_page)
+
+- `Jira Task | SCRUM-213 | "Refactor: LoginPage to Follow Flutter Architecture"`
+    - Jira Task: [SCRUM-213](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-213)
+    - BitBucket Branch: [SCRUM-213-refactor-loginpage](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-213-refactor-loginpage)
+
+- `Jira Task | SCRUM-219 | "Framework: Backend Tables"`
+    - Jira Task: [SCRUM-219](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-219)
+    - BitBucket Branch: [SCRUM-219-framework-transaction-table](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-219-framework-transaction-table)
+
+- `Jira Task | SCRUM-216 | "Implement: Add Tables to DB"`
+    - Jira Task: [SCRUM-216](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-216)
+    - BitBucket Branch: [SCRUM-216-implement-database-tables](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-216-implement-database-tables)
+
+- `Jira Task | SCRUM-240 | "Refactor: Hive EnvelopeData local -> EnvelopeID"`
+    - Jira Task: [SCRUM-240](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-240)
+    - BitBucket Branch: [SCRUM-240-hive-local-to-envelopeID](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-240-hive-local-to-envelopeID)
+
+- `Jira Task | SCRUM-218 | "Implement: Route New Collaborative Envelope"`
+    - Jira Task: [SCRUM-218](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-218)
+    - BitBucket Branch: [SCRUM-218-route-new-collab-env](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-218-route-new-collab-env)
+
+- `Jira Task | SCRUM-220 | "Implement: New Transaction Entry"`
+    - Jira Task: [SCRUM-220](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-220)
+    - BitBucket Branch: [SCRUM-220-new-transaction-serverside](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-220-new-transaction-serverside)
+
+- `Jira Task | SCRUM-222 | "Implement: Route Get Batch Collab Envelope Data"`
+    - Jira Task: [SCRUM-222](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-222)
+    - BitBucket Branch: [SCRUM-222-route-get-batch-envelopeData](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-222-route-get-batch-envelopeData)
+
+- `Jira Task | SCRUM-221 | "Implement: Route Collaborative Envelope Change"`
+    - Jira Task: [SCRUM-221](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-221)
+    - BitBucket Branch: [SCRUM-221-route-edit-envelope](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-221-route-edit-envelope)
+    - BitBucket Branch: [SCRUM-221-update-backend-diagram](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-221-update-backend-diagram)
+
+- `Jira Task | SCRUM-224 | "Implement: Route Colab Envelope Sharable Code (serverside)"`
+    - Jira Task: [SCRUM-224](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-224)
+    - BitBucket Branch: [SCRUM-224-route-share-code-request](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-224-route-share-code-request)
+
+- `Jira Task | SCRUM-225 | "Implement: Route Add User to Colab Envelope"`
+    - Jira Task: [SCRUM-225](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-225)
+    - BitBucket Branch: [SCRUM-225-route-add-user-to-env](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-225-route-add-user-to-env)
+
+- `Jira Task | SCRUM-223 | "Implement: Websocket Update Collab Envelope Data"`
+    - Jira Task: [SCRUM-223](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-223)
+    - BitBucket Branch: [SCRUM-223-websocket_backend_setup](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-223-websocket_backend_setup)
+
+- `Jira Task | SCRUM-245 | "Unit Testing: Implementing HTTPS Credential Tests"`
+    - Jira Task: [SCRUM-245](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-245)
+    - BitBucket Branch: [SCRUM-245-testing-api-credentials](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-245-testing-api-credentials)
+    - BitBucket Branch: [SCRUM-245-testing-report-credential-api](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-245-testing-report-credential-api)
+
+- `Jira Task | SCRUM-243 | "Unit Testing: Planning HTTPS Credentials Tests"`
+    - Jira Task: [SCRUM-243](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-243)
+    - BitBucket Branch: [SCRUM-243-testing-https-documentation](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-243-testing-https-documentation)
+
+- `Jira Task | SCRUM-226 | "Implement: Attach Cloud Button to Flask Route"`
+    - Jira Task: [SCRUM-226](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-226)
+    - BitBucket Branch: [SCRUM-226-attach-upload-to-server](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-226-attach-upload-to-server)
+
+- `Jira Task | SCRUM-246 | "Implement: Update envelopes from server"`
+    - Jira Task: [SCRUM-246](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-246)
+    - BitBucket Branch: [SCRUM-246-server-update-envelopes](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-246-server-update-envelopes)
+
+- `Jira Task | SCRUM-228 | "Implement: Attach Share Button to Flask Route"`
+    - Jira Task: [SCRUM-228](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-228)
+    - BitBucket Branch: [SCRUM-228-attach-share-to-server](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-228-attach-share-to-server)
+
+- `Jira Task | SCRUM-227 | "Implement: Attach Join Code to Flask Route"`
+    - Jira Task: [SCRUM-227](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-227)
+    - BitBucket Branch: [SCRUM-227-attach-join-button-to-server](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-227-attach-join-button-to-server)
+
+- `Jira Task | SCRUM-215 | "Framework: API Flowchart for Collaborative Envelopes"`
+    - Jira Task: [SCRUM-215](https://cs3398-ewoks-s26.atlassian.net/browse/SCRUM-215)
+    - BitBucket Branch: [SCRUM-215-framework-api-flowchart](https://bitbucket.org/cs3398-ewoks-s26/meownvelope/branch/SCRUM-215-framework-api-flowchart)

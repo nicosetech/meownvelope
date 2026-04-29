@@ -4,14 +4,21 @@ from dotenv import load_dotenv
 import os
 from forms import validate_contact_form
 from emailservice import send_support_email
-from api.api_routes import api
+from api.credential_api import credential_api
+from api.envelope_data_api import envelope_data_api
+from api.websocket_api import initialize_socketio
 from api.database import init_db
+from flask_socketio import SocketIO, send, emit, join_room, leave_room
+
+
 
 #Setup Environment
 load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+socketio = SocketIO(app)
 
 with app.app_context():
     init_db()
@@ -28,8 +35,10 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv('EMAIL_USER')
 #Creates mail object
 mail = Mail(app)
 
-app.register_blueprint(api)
+app.register_blueprint(credential_api)
+app.register_blueprint(envelope_data_api)
 
+initialize_socketio(socketio)
 
 @app.route('/')
 def home():
@@ -78,11 +87,13 @@ def info():
     return render_template('info.html')
 
 if __name__ == '__main__':
-    app.run(
+    socketio.run(
+        app, 
         host='0.0.0.0',
-        port=8000,
+        port=443,
         ssl_context=(
-            "/etc/letsencrypt/live/szafall-gw.asuscomm.com/fullchain.pem",
-            "/etc/letsencrypt/live/szafall-gw.asuscomm.com/privkey.pem"
-        )
+            "/etc/letsencrypt/fullchain.pem",
+            "/etc/letsencrypt/meownvelope.com_private_key.key",
+        ),
+        allow_unsafe_werkzeug=True
     )

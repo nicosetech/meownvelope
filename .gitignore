@@ -71,6 +71,8 @@ meownvelope_mobile/build/
 meownvelope_mobile/coverage/
 meownvelope_mobile/macos/
 meownvelope_mobile/ios/
+meownvelope_mobile/windows/
+meownvelope_mobile/linux/
 
 # Symbolication related
 app.*.symbols
